@@ -1,0 +1,21 @@
+#img-bg{
+    background-image: url('/assets/img/casa-guardar-iconos-mundo_24877-50570.jpg');
+
+    min-height: 600px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-gold{
+    color: #C2A83E;
+}
+
+.text-verde{
+    color: #57AE09;
+}
+
+.verde{
+    color: #00b295;
+}
