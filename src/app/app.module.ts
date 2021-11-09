@@ -8,7 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { LandingComponent } from './landing/landing.component';
-=======
+
 import { EntrarComponent } from './entrar/entrar.component';
 
 
@@ -16,7 +16,7 @@ import { EntrarComponent } from './entrar/entrar.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    SobreNosComponent
+    SobreNosComponent,
     LandingComponent,
     EntrarComponent
   ],
