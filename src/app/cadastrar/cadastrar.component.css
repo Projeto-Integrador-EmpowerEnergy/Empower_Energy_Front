@@ -1,0 +1,19 @@
+#img-bg{
+    background-image: url('../../assets/img/fotoCadastro.jpg'); 
+   
+   min-height: 100vh;
+   
+   /* background-position: center; */
+   background-repeat: no-repeat;
+   background-size:cover;
+   
+   }
+   
+   #cad{
+       color: #C2A83E;
+   
+   }
+   
+   #emp{
+       color: #00B295 ;
+   }
