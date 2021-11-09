@@ -9,7 +9,15 @@ export class LandingComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    window.scroll(0,0)
+    /* this.carouselTransition() */
   }
+
+  /* carouselTransition() {
+    $("#myCarousel").carousel({
+      interval: false
+    });
+  } */
 
 }

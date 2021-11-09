@@ -7,6 +7,8 @@
         <div class="col-md-10">
 
           <div class="row mb-5 pl-3">
+
+            
             <h1 id="emp">Empower</h1>
             <h1 id="cad">Energy</h1>
           </div>
@@ -16,18 +18,18 @@
 
           <div class="form-group">
             <label for="nome">Nome</label>
-            <input
+            <input [(ngModel)]='user.nomeUsuario'
               class="form-control"
               type="text"
               name="nome"
               id="nome"
-              placeholder="Como gostaria de ser chamado?"
+              placeholder="Como gostaria de ser chamade?"
             />
           </div>
 
           <div class="form-group">
             <label for="sobreNome">Sobrenome</label>
-            <input
+            <input [(ngModel)]='user.sobrenomeUsuario'
               class="form-control"
               type="text"
               name="sobreNome"
@@ -38,7 +40,7 @@
 
           <div class="form-group">
             <label for="email">Email</label>
-            <input
+            <input [(ngModel)]='user.emailUsuario'
               class="form-control"
               type="text"
               name="email"
@@ -49,7 +51,7 @@
 
           <div class="form-group">
             <label for="idade">Idade</label>
-            <input
+            <input [(ngModel)]='user.idadeUsuario'
               class="form-control"
               type="number"
               name="idade"
@@ -59,8 +61,20 @@
           </div>
 
           <div class="form-group">
+            <label for="foto">Link da Foto</label>
+            <input [(ngModel)]='user.fotoUsuario'
+              class="form-control"
+              type="text"
+              name="foto"
+              id="foto"
+              placeholder="Link da sua Foto"
+            />
+          </div>
+
+          
+          <div class="form-group">
             <label for="senha">Senha</label>
-            <input
+            <input (input)='confirmSenha($event)'
               class="form-control"
               type="password"
               name="senha"
@@ -71,7 +85,7 @@
 
           <div class="form-group">
             <label for="confirmSenha">Confirme sua Senha</label>
-            <input
+            <input [(ngModel)]='user.senhaUsuario'
               class="form-control"
               type="password"
               name="confirmSenha"
@@ -90,8 +104,9 @@
           </div>
 
           <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-danger mr-4">Cancelar</button>
-            <button type="submit" class="btn btn-success mr-4">Cadastrar</button>
+            <button type="submit" class="btn btn-danger mr-4" routerLink='/entrar'>Cancelar</button>
+            <button type="submit" class="btn btn-success mr-4" (click)='cadastrar()'
+            >Cadastrar</button>
           </div>
 
         </div>
