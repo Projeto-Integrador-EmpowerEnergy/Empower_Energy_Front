@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CadastrarComponent } from '../cadastrar/cadastrar.component';
-import { EntrarComponent } from '../entrar/entrar.component';
+import { User } from '../model/User';
+import { UserLogin } from '../model/UserLogin';
 
 @Injectable({
   providedIn: 'root'
@@ -14,12 +14,12 @@ export class AuthService {
   ) { }
 
  entrar(userLogin: UserLogin): Observable<UserLogin>{
-   return this.http.post<UserLogin>('https://empowerenergyprojeto.herokuapp.com/api/v1/usuarios/logar',userLogin)
+   return this.http.post<UserLogin>('https://empowerenergyprojeto.herokuapp.com/api/v1/usuarios/logar', userLogin)
 
  }
 
- CadastrarComponent(usuario: UsuarioModel): Observable<UsuarioModel>{
-    return this.http.post<UsuarioModel>('https://empowerenergyprojeto.herokuapp.com/api/v1/usuarios/cadastrar',usuario)
+ cadastrar(usuario: User): Observable<User>{
+    return this.http.post<User>('https://empowerenergyprojeto.herokuapp.com/api/v1/usuarios/cadastrar', usuario)
 
 
 
