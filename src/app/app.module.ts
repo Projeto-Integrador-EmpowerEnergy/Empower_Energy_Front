@@ -1,3 +1,5 @@
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,22 +10,26 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { LandingComponent } from './landing/landing.component';
-=======
 import { EntrarComponent } from './entrar/entrar.component';
+import { CadastrarComponent } from './cadastrar/cadastrar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    SobreNosComponent
+    SobreNosComponent,
     LandingComponent,
-    EntrarComponent
+    EntrarComponent,
+    CadastrarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
