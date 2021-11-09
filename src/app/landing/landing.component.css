@@ -286,8 +286,8 @@ color: #fff;
 }
 
 .btn--white:hover{
-  background-color: #fff;
-  color: #8198ae;
+  background-color: #3a9fff;
+  color: white;
 }
 
 .price-box__btn {
@@ -539,6 +539,7 @@ filter: drop-shadow(0px 7px 4px rgba(0,0,0,.2));
 }
 .navbar-toggle {
     margin: 5px 0;
+    display: none;
 }
 .partner{
   margin-bottom:15px;
