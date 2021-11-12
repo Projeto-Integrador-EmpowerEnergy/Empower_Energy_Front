@@ -20,7 +20,9 @@
   background-color: rgba(127, 255, 212, 0.644);
 }
 .borda {
-  border-radius: 100px;
+  vertical-align: middle;
+  border-style: none;
+  width: 100%;
 }
 /* CSS do botao brabo  */
 
