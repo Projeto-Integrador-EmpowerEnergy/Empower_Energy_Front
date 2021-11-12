@@ -17,7 +17,7 @@ export class TemaService {
   }
 
   getAllTema(): Observable<Tema[]>{
-    return this.http.get<Tema[]>('https://empowerenergyprojeto.herokuapp.com/api/v1/tema/GetTema', this.token)
+    return this.http.get<Tema[]>('https://empowerenergyprojeto.herokuapp.com/api/v1/tema/todas', this.token)
   }
 
   postTema(tema: Tema): Observable<Tema>{
