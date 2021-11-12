@@ -24,4 +24,8 @@ export class TemaService {
     return this.http.post<Tema>('https://empowerenergyprojeto.herokuapp.com/api/v1/tema/salvar', tema, this.token)
   }
 
+  getByIdTema(id: number): Observable<Tema>{
+    return this.http.get<Tema>(`https://empowerenergyprojeto.herokuapp.com/api/v1/tema/${id}`, this.token)
+  }
+
 }

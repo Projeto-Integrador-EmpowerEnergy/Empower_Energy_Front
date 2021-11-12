@@ -10,6 +10,6 @@ export class Postagem{
     public localizacao: string
     public titulo: string
     public mencao: string
-    public tema: Tema[]
-    public usuario: User[]
+    public tema: Tema
+    public usuario: User
 }
