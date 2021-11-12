@@ -4,13 +4,15 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LandingComponent } from './landing/landing.component';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'landing', pathMatch: 'full'},
   {path: 'entrar', component: EntrarComponent},
   {path: 'cadastrar', component: CadastrarComponent},
   {path: 'inicio', component: InicioComponent},
-  {path: 'landing', component: LandingComponent}
+  {path: 'landing', component: LandingComponent},
+  {path: 'sobrenos', component: SobreNosComponent}
 ];
 
 @NgModule({
