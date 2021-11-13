@@ -73,4 +73,12 @@
 .fa-github-icone{
 font-size: 80px;
 background-color: #81ecec;
+top: 10px;
+}
+.div-sobre{
+  background-color: #81ecec;
+  margin-bottom: 0%;
+}
+.carrosel-borda{
+  border-radius: 100px;
 }
