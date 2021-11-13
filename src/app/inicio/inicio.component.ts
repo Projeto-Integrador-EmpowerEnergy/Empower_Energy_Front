@@ -4,6 +4,8 @@ import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { User } from '../model/User';
+import { UserLogin } from '../model/UserLogin';
+import { TemaEnum } from '../model/TemaEnum';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
@@ -15,6 +17,12 @@ import { TemaService } from '../service/tema.service';
 })
 export class InicioComponent implements OnInit {
 
+  TemaEnum = TemaEnum
+
+  nome = environment.nome
+  sobrenome = environment.sobrenome
+  foto = environment.foto
+
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
 
@@ -23,7 +31,10 @@ export class InicioComponent implements OnInit {
   idTema: number
 
   user: User = new User()
+  listaUsuarios: User[]
   idUser = environment.id
+  nomeUsuario = environment.nome
+  userLogin: UserLogin = new UserLogin
 
   constructor(
     private router: Router,
@@ -47,13 +58,19 @@ export class InicioComponent implements OnInit {
     this.getAllPostagens()
 }
 
-findByIdTema(){
+/* findByIdTema(){
   this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
     this.tema = resp
   })
-}
+} */
 
   getAllPostagens(){
+    console.log(this.idUser)
+    console.log(this.nomeUsuario)
+    /* console.log(this.nome)
+    console.log(this.user)
+    console.log(this.userLogin.nome) */
+
     this.postagemService.geAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
     })
@@ -66,13 +83,20 @@ findByIdTema(){
   }
 
   publicar(){
-    this.tema.idTema = this.idTema
-    this.postagem.tema = this.tema
+    /* console.log(this.postagem.usuario)
+    console.log(this.user.nomeUsuario) */
+    /* this.tema.idTema = this.idTema
+    this.postagem.tema = this.tema */
+    console.log(this.nomeUsuario)
 
     this.user.idUsuario = this.idUser
     this.postagem.usuario = this.user
+    /* this.postagem.usuario.nomeUsuario = this.nome */
+    this.postagem.usuario.fotoUsuario = this.foto
+    environment.nome = this.nomeUsuario
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
+      /* console.log(this.postagem) */
       this.postagem = resp
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
