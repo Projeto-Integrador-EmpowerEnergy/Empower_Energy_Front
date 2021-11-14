@@ -10,6 +10,8 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { LandingComponent } from './landing/landing.component';
 
 import { EntrarComponent } from './entrar/entrar.component';
+import { RodapeComponent } from './rodape/rodape.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { EntrarComponent } from './entrar/entrar.component';
     NavbarComponent,
     SobreNosComponent,
     LandingComponent,
-    EntrarComponent
+    EntrarComponent,
+    RodapeComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
