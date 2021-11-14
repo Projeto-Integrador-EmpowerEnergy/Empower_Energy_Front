@@ -41,3 +41,20 @@ export class PostagemService {
     this.http.delete(`https://empowerenergyprojeto.herokuapp.com/ap1/v1/postagem/deletar/${id}`)
   }
 }
+headers: new HttpHeaders().set('Autorization', environment.token)
+  }
+
+  getAllPostagens(): Observable<Postagem[]>{
+    return this.http.get<Postagem[]>('https://empowerenergyprojeto.herokuapp.com/api/v1/postagem/todos', this.token)
+  }
+
+  postPostagem(postagem: Postagem): Observable<Postagem>{
+    return this.http.post<Postagem>('https://empowerenergyprojeto.herokuapp.com/api/v1/postagem/salvar', this.token)
+  }
+
+
+
+
+
+}
+
