@@ -12,7 +12,36 @@ export class PostagemService {
   constructor(private http: HttpClient) { }
 
   token = {
-    headers: new HttpHeaders().set('Autorization', environment.token)
+    headers: new HttpHeaders().set('Authorization', environment.token)
+  }
+
+  refreshToken(){
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+  }
+
+  getByIdPostagem(id: number): Observable<Postagem>{
+    return this.http.get<Postagem>(`https://empowerenergyprojeto.herokuapp.com/ap1/v1/postagem/${id}`)
+  }
+
+  geAllPostagens(): Observable<Postagem[]> {
+    return this.http.get<Postagem[]>('https://empowerenergyprojeto.herokuapp.com/ap1/v1/postagem', this.token)
+  }
+
+  postPostagem(postagem: Postagem): Observable<Postagem> {
+    return this.http.post<Postagem>('https://empowerenergyprojeto.herokuapp.com/ap1/v1/postagem/salvar', postagem, this.token)
+  }
+
+  putPostagem(postagem: Postagem): Observable<Postagem>{
+    return this.http.put<Postagem>('https://empowerenergyprojeto.herokuapp.com/ap1/v1/postagematualizar', postagem, this.token)
+  }
+
+  deletePostagem(id: number){
+    this.http.delete(`https://empowerenergyprojeto.herokuapp.com/ap1/v1/postagem/deletar/${id}`)
+  }
+}
+headers: new HttpHeaders().set('Autorization', environment.token)
   }
 
   getAllPostagens(): Observable<Postagem[]>{
@@ -28,3 +57,4 @@ export class PostagemService {
 
 
 }
+
