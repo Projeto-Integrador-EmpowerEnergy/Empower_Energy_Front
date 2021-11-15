@@ -34,10 +34,10 @@ export class PostagemService {
   }
 
   putPostagem(postagem: Postagem): Observable<Postagem>{
-    return this.http.put<Postagem>('https://empowerenergyprojeto.herokuapp.com/api/v1/postagematualizar', postagem, this.token)
+    return this.http.put<Postagem>('https://empowerenergyprojeto.herokuapp.com/api/v1/postagem/atualizar', postagem, this.token)
   }
 
   deletePostagem(id: number){
-    this.http.delete(`https://empowerenergyprojeto.herokuapp.com/ap1/v1/postagem/deletar/${id}`)
+    this.http.delete(`https://empowerenergyprojeto.herokuapp.com/ap1/v1/postagem/deletar/${id}`, this.token)
   }
 }

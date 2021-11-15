@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
@@ -9,6 +9,7 @@ import { TemaEnum } from '../model/TemaEnum';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
+import { Route } from '@angular/compiler/src/core';
 
 @Component({
   selector: 'app-inicio',
@@ -25,6 +26,7 @@ export class InicioComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
+  idPostagem: number
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
@@ -38,6 +40,7 @@ export class InicioComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     private postagemService: PostagemService,
     private temaService: TemaService,
     private authService: AuthService
@@ -56,6 +59,9 @@ export class InicioComponent implements OnInit {
     this.authService.refreshToken()
 
     this.getAllPostagens()
+
+    /* this.idPostagem = this.route.snapshot.params['id'] */
+    /* this.findByIdPostagem(this.idPostagem) */
 }
 
 /* findByIdTema(){
@@ -65,12 +71,6 @@ export class InicioComponent implements OnInit {
 } */
 
   getAllPostagens(){
-    console.log(this.idUser)
-    console.log(this.nomeUsuario)
-    /* console.log(this.nome)
-    console.log(this.user)
-    console.log(this.userLogin.nome) */
-
     this.postagemService.geAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
     })
@@ -83,24 +83,35 @@ export class InicioComponent implements OnInit {
   }
 
   publicar(){
-    /* console.log(this.postagem.usuario)
-    console.log(this.user.nomeUsuario) */
-    /* this.tema.idTema = this.idTema
-    this.postagem.tema = this.tema */
-    console.log(this.nomeUsuario)
-
     this.user.idUsuario = this.idUser
     this.postagem.usuario = this.user
-    /* this.postagem.usuario.nomeUsuario = this.nome */
-    this.postagem.usuario.fotoUsuario = this.foto
-    environment.nome = this.nomeUsuario
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
-      /* console.log(this.postagem) */
       this.postagem = resp
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
+    })
+  }
+
+  deletar(){
+    this.user.idUsuario = this.idUser
+    this.postagem.usuario = this.user
+    this.postagem.idPostagem = this.idPostagem
+
+    alert('Tem certeza que você quer excluir esta postagem?')
+    /* this.postagemService.deletePostagem(this.idPostagem).subscribe(() => {
+      this.getAllPostagens()
+    })     */
+  }
+
+  findByIdPostagem(idPostagem: number){
+    this.postagem.idPostagem = this.idPostagem
+    console.log(this.postagem.idPostagem)
+    alert('Deseja editar essa postagem?')
+    this.postagemService.getByIdPostagem(idPostagem).subscribe((resp: Postagem) => {
+
+      this.postagem = resp
     })
   }
 
