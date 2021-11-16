@@ -11,11 +11,23 @@ height: 160px;
 }
 
 
-   #cad{
+
+#cad{
        color: #C2A83E;
 
-   }
+}
 
-   #emp{
-       color: #00B295 ;
-   }
+
+#img-bg{
+    /* height: 100%; */
+    /* width: 100%; */
+
+    min-height: 900px;
+    height: 100px;
+    width: 100px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
