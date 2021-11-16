@@ -1,5 +1,5 @@
 #img-bg{
-    background-image: url('/assets/img/casa-guardar-iconos-mundo_24877-50570.jpg');
+    background-image: url('../../assets/img/fotoEntrar.jpg');
 
     min-height: 600px;
 
@@ -19,3 +19,15 @@
 .verde{
     color: #00b295;
 }
+
+img{
+
+     min-height: 5vh;
+     height: 200px;
+     width: 100%;
+     left: 100px;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size:cover;
+    }
+    

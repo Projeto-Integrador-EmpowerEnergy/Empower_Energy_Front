@@ -14,6 +14,8 @@ import { LandingComponent } from './landing/landing.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { MenuLatEsqComponent } from './menu-lat-esq/menu-lat-esq.component';
+import { MenuLateralDirComponent } from './menu-lateral-dir/menu-lateral-dir.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { InicioComponent } from './inicio/inicio.component';
     LandingComponent,
     EntrarComponent,
     CadastrarComponent,
-    InicioComponent
+    InicioComponent,
+    MenuLatEsqComponent,
+    MenuLateralDirComponent
   ],
   imports: [
     BrowserModule,
