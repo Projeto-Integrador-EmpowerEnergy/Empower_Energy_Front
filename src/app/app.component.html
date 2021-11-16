@@ -1,7 +1,13 @@
 <app-menu-lat-esq *ngIf='auth.logado()'></app-menu-lat-esq>
 
+
+<!-- <app-landing></app-landing> -->
+
+<!-- <app-entrar></app-entrar>  -->
+
 <router-outlet></router-outlet>
 
+<!-- <app-entrar></app-entrar> -->
 
-
+ <app-perfil *ngIf='auth.logado()'></app-perfil>
 
