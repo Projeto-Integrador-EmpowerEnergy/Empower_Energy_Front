@@ -1,1 +1,207 @@
-<p>inicio works!</p>
+<div class="container margint-10">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-8 p-0">
+
+      <div class="postagem-container rounded">
+        <div class="row d-flex justify-content-center py-3 mb-3 mx-0">
+          <div class="col-md-1 mr-1">
+            <img
+              class="rounded-circle"
+              height="45px"
+              width="45px"
+              src="{{foto}}"
+              alt=""
+            />
+          </div>
+
+          <div class="col-md-10">
+            <div class="mr-3">
+              <button style="width: 100%; height: 45px;" type="button" class="btn btn-light rounded-pill border border-dark bg-white d-flex" data-toggle="modal" data-target="#novaPostagem">Digite seu texto aqui</button>
+            </div>
+          </div>
+
+          <div class="row d-flex justify-content-around mt-3">
+            <div class="col-md-2 mr-3">
+              <button type="button" class="btn btn-light">Foto</button>
+            </div>
+            <div class="col-md-2">
+              <button type="button" class="btn btn-light">Tema</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>
+
+<!-- Cards -->
+<div class="container my-2">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-8 p-0" *ngFor="let item of listaPostagens">
+
+      <div class="postagem-container rounded p-0">
+        <div class="row d-flex justify-content-center pt-3 mb-3 mx-0">
+          <div class="col-md-1 mr-1">
+            <img
+              class="rounded-circle bg-info"
+              height="45px"
+              width="45px"
+              src="{{item.usuario.fotoUsuario}}"
+              alt=""
+            />
+          </div>
+
+          <div class="col-md-9">
+            <div class="mr-2">
+              <h6 class="text-muted">{{item.usuario.nomeUsuario}} {{item.usuario.sobrenomeUsuario}}</h6>
+            </div>
+
+            <div class="mr-3">
+              <small class="text-muted">Data: {{item.dataPostagem}}</small>
+            </div>
+          </div>
+
+          <div class="col-md-1 pl-0">
+            <a data-toggle="modal" data-target="#editarPostagem" href="#editarPostagem"><i class="fa fa-pencil mr-1"  aria-hidden="true" (click)="findByIdPostagem(item.idPostagem)"></i></a>
+
+            <a><i class="fa fa-trash ml-2" style="color:red" aria-hidden="true" (click)="deletarPostagem()"></i></a>
+          </div>
+
+          <div class="row d-flex justify-content-center w-100 mt-3 mx-0">
+            <div class="col-md-11">
+
+                <div class="row d-flex align-items-center">
+                  <div class="col-md-10">
+                    <h5 class="text-align mb-0 align-items-center">{{item.titulo}}</h5>
+                  </div>
+
+                  <div class="col-md-2 d-flex justify-content-end">
+                    <button type="button" class="btn btn-success">{{item.tema.tema}}</button>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+
+          <div class="row d-flex justify-content-center mt-2 mx-0">
+            <div class="col-md-11">
+              <p class="mb-0 text-justify">{{item.descricao}}</p>
+            </div>
+
+            <div class="row d-flex justify-content-start w-100 ml-5">
+              <a href="#inicio">{{item.hashtag}}</a>
+            </div>
+          </div>
+
+          <div class="row d-flex justify-content mt-1 mx-0">
+            <div class="col-md-12">
+              <img src="{{item.imagem}}" height="400px" alt="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal Criação Postagem -->
+<div class="modal" id="novaPostagem" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Criar publicação</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="título">Título</label>
+          <input [(ngModel)]='postagem.titulo' class="form-control" name="título" id="título"  rows="1" placeholder="Digite seu título aqui">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Texto</label>
+          <textarea [(ngModel)]='postagem.descricao' class="form-control" name="texto" id="texto"  rows="3" placeholder="Digite seu texto aqui"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="foto">Foto</label>
+          <input [(ngModel)]='postagem.imagem' class="form-control" name="foto" id="foto"  rows="1" placeholder="Cole o link da sua foto aqui">
+        </div>
+
+        <div class="form-group">
+          <label for="hashtag">Hashtag</label>
+          <input [(ngModel)]='postagem.hashtag' class="form-control" name="hashtag" id="hashtag"  rows="1" placeholder="Adicione suas hashtags aqui">
+        </div>
+
+        <div class="form-group">
+          <label for="tema">Tema</label>
+          <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)="getAllTemas()">
+            <option *ngFor="let item of listaTemas" value="{{item.idTema}}">{{item.tema}}</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)="publicarPostagem()" data-dismiss="modal">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edição Postagem -->
+<div class="modal" id="editarPostagem" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Editar publicação</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="título">Título</label>
+          <input [(ngModel)]='postagem.titulo' class="form-control" name="título" id="título"  rows="1" placeholder="Digite seu título aqui">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Texto</label>
+          <textarea [(ngModel)]='postagem.descricao' class="form-control" name="texto" id="texto"  rows="3" placeholder="Digite seu texto aqui"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="foto">Foto</label>
+          <input [(ngModel)]='postagem.imagem' class="form-control" name="foto" id="foto"  rows="1" placeholder="Cole o link da sua foto aqui">
+        </div>
+
+        <div class="form-group">
+          <label for="hashtag">Hashtag</label>
+          <input [(ngModel)]='postagem.hashtag' class="form-control" name="hashtag" id="hashtag"  rows="1" placeholder="Adicione suas hashtags aqui">
+        </div>
+
+        <div class="form-group">
+
+          <label for="tema">Tema</label>
+          <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)="getAllTemas()">
+            <option *ngFor="let item of listaTemas" value="{{item.idTema}}">{{item.tema}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)="editarPostagem()" data-dismiss="modal">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

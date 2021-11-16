@@ -1,19 +1,33 @@
-#img-bg{
-    background-image: url('../../assets/img/fotoCadastro.jpg');
+img{
 
-   min-height: 100vh;
-
-   /* background-position: center; */
+/* min-height: 100vh; */
+   
+height: 160px;
+ width: 100%;
+ left: 100px;
+/* background-position: center; */
    background-repeat: no-repeat;
    background-size:cover;
+}
 
-   }
 
-   #cad{
+
+#cad{
        color: #C2A83E;
 
-   }
+}
 
-   #emp{
-       color: #00B295 ;
-   }
+
+#img-bg{
+    /* height: 100%; */
+    /* width: 100%; */
+
+    min-height: 900px;
+    height: 100px;
+    width: 100px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}

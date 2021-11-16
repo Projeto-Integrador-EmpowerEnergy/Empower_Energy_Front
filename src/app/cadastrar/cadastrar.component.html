@@ -1,24 +1,35 @@
-<div class="container-fluid" style="background-color: #EAEBED;">
+<div class="container-fluid" style="background-color: #eaebed">
   <div class="row">
-    <div class="col-md-6" id="img-bg"></div>
+    
+    <div class="col-md-6" class="img">
+      <img
+        src="('../../../../assets/img/logo2.png "
+        alt="foto do cadastro"
+      />
+    </div>
+
+    <div class="col-md-6" class="img-bg">
+      <img
+        src="('../../../../assets/img/lampadaCadastrar.jpg "
+        alt="foto do cadastro2" />
+    </div>
 
     <div class="col-md-6 mt-5 mb-5">
       <div class="row d-flex justify-content-center">
         <div class="col-md-10">
-
           <div class="row mb-5 pl-3">
-
-          
-            <h1 id="emp">Empower</h1>
-            <h1 id="cad">Energy</h1>
+            <!-- <h1 id="emp">Empower</h1> -->
+            <!-- <h1 id="cad">Energy</h1> -->
           </div>
 
-          <h2 class="text-center" id="cad">Cadastre-se</h2>
+
+          <h1 class="text-center" id="cad">Cadastre-se</h1>
           <!-- <h4 class="text-center" >Bem-vindes</h4> -->
 
           <div class="form-group">
             <label for="nome">Nome</label>
-            <input [(ngModel)]='user.nomeUsuario'
+            <input
+              [(ngModel)]="user.nomeUsuario"
               class="form-control"
               type="text"
               name="nome"
@@ -29,7 +40,8 @@
 
           <div class="form-group">
             <label for="sobreNome">Sobrenome</label>
-            <input [(ngModel)]='user.sobrenomeUsuario'
+            <input
+              [(ngModel)]="user.sobrenomeUsuario"
               class="form-control"
               type="text"
               name="sobreNome"
@@ -40,7 +52,8 @@
 
           <div class="form-group">
             <label for="email">Email</label>
-            <input [(ngModel)]='user.emailUsuario'
+            <input
+              [(ngModel)]="user.emailUsuario"
               class="form-control"
               type="text"
               name="email"
@@ -51,7 +64,8 @@
 
           <div class="form-group">
             <label for="idade">Idade</label>
-            <input [(ngModel)]='user.idadeUsuario'
+            <input
+              [(ngModel)]="user.idadeUsuario"
               class="form-control"
               type="number"
               name="idade"
@@ -62,7 +76,8 @@
 
           <div class="form-group">
             <label for="foto">Link da Foto</label>
-            <input [(ngModel)]='user.fotoUsuario'
+            <input
+              [(ngModel)]="user.fotoUsuario"
               class="form-control"
               type="text"
               name="foto"
@@ -71,10 +86,10 @@
             />
           </div>
 
-
           <div class="form-group">
             <label for="senha">Senha</label>
-            <input (input)='confirmSenha($event)'
+            <input
+              (input)="confirmSenha($event)"
               class="form-control"
               type="password"
               name="senha"
@@ -85,7 +100,8 @@
 
           <div class="form-group">
             <label for="confirmSenha">Confirme sua Senha</label>
-            <input [(ngModel)]='user.senhaUsuario'
+            <input
+              [(ngModel)]="user.senhaUsuario"
               class="form-control"
               type="password"
               name="confirmSenha"
@@ -104,11 +120,21 @@
           </div>
 
           <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-danger mr-4" routerLink='/entrar'>Cancelar</button>
-            <button type="submit" class="btn btn-success mr-4" (click)='cadastrar()'
-            >Cadastrar</button>
+            <button
+              type="submit"
+              class="btn btn-danger mr-4"
+              routerLink="/entrar"
+            >
+              Cancelar
+            </button>
+            <button
+              type="submit"
+              class="btn btn-success mr-4"
+              (click)="cadastrar()"
+            >
+              Cadastrar
+            </button>
           </div>
-
         </div>
       </div>
     </div>
