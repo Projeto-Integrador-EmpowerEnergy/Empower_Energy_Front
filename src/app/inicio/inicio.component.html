@@ -64,19 +64,30 @@
           </div>
 
           <div class="col-md-1 pl-0">
-            <a data-toggle="modal" data-target="#editarPostagem" href="#editarPostagem"><i class="fa fa-pencil mr-1"  aria-hidden="true" (click)="findByIdPostagem(idPostagem)"></i></a>
-            <a href="#inicio"><i class="fa fa-trash ml-2" style="color:red" aria-hidden="true" (click)="deletar()"></i></a>
+            <a data-toggle="modal" data-target="#editarPostagem" href="#editarPostagem"><i class="fa fa-pencil mr-1"  aria-hidden="true" (click)="findByIdPostagem(item.idPostagem)"></i></a>
+
+            <a><i class="fa fa-trash ml-2" style="color:red" aria-hidden="true" (click)="deletarPostagem()"></i></a>
           </div>
 
           <div class="row d-flex justify-content-center w-100 mt-3 mx-0">
             <div class="col-md-11">
-              <h5 class="text-align">{{item.titulo}}</h5>
+
+                <div class="row d-flex align-items-center">
+                  <div class="col-md-10">
+                    <h5 class="text-align mb-0 align-items-center">{{item.titulo}}</h5>
+                  </div>
+
+                  <div class="col-md-2 d-flex justify-content-end">
+                    <button type="button" class="btn btn-success">{{item.tema.tema}}</button>
+                  </div>
+                </div>
+
             </div>
           </div>
 
           <div class="row d-flex justify-content-center mt-2 mx-0">
             <div class="col-md-11">
-              <p class="mb-0">{{item.descricao}}</p>
+              <p class="mb-0 text-justify">{{item.descricao}}</p>
             </div>
 
             <div class="row d-flex justify-content-start w-100 ml-5">
@@ -130,17 +141,16 @@
         </div>
 
         <div class="form-group">
-
           <label for="tema">Tema</label>
-          <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' > <!-- (change)="findByIdTema" -->
-            <option *ngFor="let item of listaTemas" value="{{item.categoria}}" >{{item.categoria}}</option>
-            <option  value="">Escolha um tema</option>
+          <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)="getAllTemas()">
+            <option *ngFor="let item of listaTemas" value="{{item.idTema}}">{{item.tema}}</option>
           </select>
         </div>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" (click)="publicar()" data-dismiss="modal">Publicar</button>
+        <button type="button" class="btn btn-primary" (click)="publicarPostagem()" data-dismiss="modal">Publicar</button>
       </div>
     </div>
   </div>
@@ -181,15 +191,14 @@
         <div class="form-group">
 
           <label for="tema">Tema</label>
-          <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' > <!-- (change)="findByIdTema" -->
-            <option *ngFor="let item of listaTemas" value="{{item.categoria}}" >{{item.categoria}}</option>
-            <option  value="">Escolha um tema</option>
+          <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)="getAllTemas()">
+            <option *ngFor="let item of listaTemas" value="{{item.idTema}}">{{item.tema}}</option>
           </select>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" (click)="publicar()" data-dismiss="modal">Publicar</button>
+        <button type="button" class="btn btn-primary" (click)="editarPostagem()" data-dismiss="modal">Publicar</button>
       </div>
     </div>
   </div>
