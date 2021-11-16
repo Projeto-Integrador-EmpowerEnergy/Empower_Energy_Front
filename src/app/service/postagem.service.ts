@@ -22,7 +22,7 @@ export class PostagemService {
   }
 
   getByIdPostagem(id: number): Observable<Postagem>{
-    return this.http.get<Postagem>(`https://empowerenergyprojeto.herokuapp.com/api/v1/postagem/${id}`)
+    return this.http.get<Postagem>(`https://empowerenergyprojeto.herokuapp.com/api/v1/postagem/${id}`, this.token)
   }
 
   geAllPostagens(): Observable<Postagem[]> {
@@ -38,7 +38,7 @@ export class PostagemService {
   }
 
   deletePostagem(id: number){
-    this.http.delete(`https://empowerenergyprojeto.herokuapp.com/ap1/v1/postagem/deletar/${id}`, this.token)
+    return this.http.delete(`https://empowerenergyprojeto.herokuapp.com/ap1/v1/postagem/deletar/${id}`, this.token)
   }
 
 }
