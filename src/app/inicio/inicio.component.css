@@ -12,7 +12,8 @@
   height: 25px;
 }
 
-.bradius{
-  border-radius: 51;
+#img-rouded{
+  border: 2px solid black;
+  border-radius: 50%;
 }
 
