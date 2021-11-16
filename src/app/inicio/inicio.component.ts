@@ -5,11 +5,9 @@ import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { User } from '../model/User';
 import { UserLogin } from '../model/UserLogin';
-import { TemaEnum } from '../model/TemaEnum';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
-import { Route } from '@angular/compiler/src/core';
 
 @Component({
   selector: 'app-inicio',
@@ -17,8 +15,6 @@ import { Route } from '@angular/compiler/src/core';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
-
-  TemaEnum = TemaEnum
 
   nome = environment.nome
   sobrenome = environment.sobrenome
@@ -56,19 +52,25 @@ export class InicioComponent implements OnInit {
     }
 
     this.postagemService.refreshToken()
+    this.temaService.refreshToken()
     this.authService.refreshToken()
 
     this.getAllPostagens()
+    this.getAllTemas()
 
-    /* this.idPostagem = this.route.snapshot.params['id'] */
-    /* this.findByIdPostagem(this.idPostagem) */
 }
 
-/* findByIdTema(){
-  this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
-    this.tema = resp
-  })
-} */
+  getAllTemas(){
+    this.temaService.getAllTema().subscribe((resp: Tema[]) => {
+      this.listaTemas = resp
+    })
+  }
+
+  findByIdTema(){
+    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
+      this.tema = resp
+    })
+  }
 
   getAllPostagens(){
     this.postagemService.geAllPostagens().subscribe((resp: Postagem[]) => {
@@ -82,9 +84,14 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  publicar(){
+  publicarPostagem(){
     this.user.idUsuario = this.idUser
     this.postagem.usuario = this.user
+
+    this.tema.idTema = this.idTema
+    this.postagem.tema = this.tema
+
+    console.log(this.postagem)
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
@@ -94,20 +101,32 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  deletar(){
+  editarPostagem(){
     this.user.idUsuario = this.idUser
     this.postagem.usuario = this.user
-    this.postagem.idPostagem = this.idPostagem
 
-    alert('Tem certeza que você quer excluir esta postagem?')
-    /* this.postagemService.deletePostagem(this.idPostagem).subscribe(() => {
+    this.tema.idTema = this.idTema
+    this.postagem.tema = this.tema
+
+    console.log(this.postagem)
+
+    this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
+      this.postagem = resp
+      alert('Postagem atualizada com sucesso!')
+      this.postagem = new Postagem()
       this.getAllPostagens()
-    })     */
+    })
+  }
+
+  deletarPostagem(){
+    console.log(this.postagem.idPostagem)
+    this.postagemService.deletePostagem(this.postagem.idPostagem).subscribe(() => {
+      alert('Tem certeza que você quer excluir esta postagem?')
+      this.getAllPostagens()
+    })
   }
 
   findByIdPostagem(idPostagem: number){
-    this.postagem.idPostagem = this.idPostagem
-    console.log(this.postagem.idPostagem)
     alert('Deseja editar essa postagem?')
     this.postagemService.getByIdPostagem(idPostagem).subscribe((resp: Postagem) => {
 
