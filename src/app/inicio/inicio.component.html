@@ -1,1 +1,131 @@
+<div class="container margint-10">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-8">
 
+      <div class="postagem-container rounded">
+        <div class="row d-flex justify-content-center py-3 mb-3">
+          <div class="col-md-2">
+            <img
+              class="mx-3 rounded bradius"
+              height="40px"
+              width="40px"
+              src="https://thumbs.dreamstime.com/z/default-avatar-profile-icon-vector-unknown-social-media-user-photo-default-avatar-profile-icon-vector-unknown-social-media-user-184816085.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="col-md-10">
+            <div class="mr-3">
+              <button style="width: 100%;" type="button" class="btn btn-light rounded-pill border border-dark bg-white d-flex" data-toggle="modal" data-target="#novaPostagem">Digite seu texto aqui</button>
+            </div>
+          </div>
+
+          <div class="row d-flex justify-content-around mt-3">
+            <div class="col-md-2 mr-3">
+              <button type="button" class="btn btn-light">Foto</button>
+            </div>
+            <div class="col-md-2">
+              <button type="button" class="btn btn-light">Tema</button>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cards -->
+<div class="container my-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-m-8">
+
+      <div class="postagem-container rounded">
+        <div class="row d-flex justify-content-center py-3 mb-3">
+          <div class="col-md-2">
+            <img
+              class="mx-3 rounded bradius"
+              height="40px"
+              width="40px"
+              src="https://thumbs.dreamstime.com/z/default-avatar-profile-icon-vector-unknown-social-media-user-photo-default-avatar-profile-icon-vector-unknown-social-media-user-184816085.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="col-md-10">
+            <div class="mr-3">
+              <button style="width: 100%;" type="button" class="btn btn-light rounded-pill border border-dark bg-white d-flex" data-toggle="modal" data-target="#novaPostagem">Digite seu texto aqui</button>
+            </div>
+          </div>
+
+          <div class="row d-flex justify-content-around mt-3">
+            <div class="col-md-2 mr-3">
+              <button type="button" class="btn btn-light">Foto</button>
+            </div>
+            <div class="col-md-2">
+              <button type="button" class="btn btn-light">Tema</button>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal" id="novaPostagem" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Criar publicação</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group">
+          <label for="título">Título</label>
+          <input [(ngModel)]='postagem.titulo' class="form-control" name="título" id="título"  rows="1" placeholder="Digite seu título aqui">
+        </div>
+
+        <div class="form-group">
+          <label for="texto">Texto</label>
+          <textarea [(ngModel)]='postagem.descricao' class="form-control" name="texto" id="texto"  rows="3" placeholder="Digite seu texto aqui"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="foto">Foto</label>
+          <input [(ngModel)]='postagem.imagem' class="form-control" name="foto" id="foto"  rows="1" placeholder="Cole o link da sua foto aqui">
+        </div>
+
+        <div class="form-group">
+          <label for="hashtag">Hashtag</label>
+          <input [(ngModel)]='postagem.hashtag' class="form-control" name="hashtag" id="hashtag"  rows="1" placeholder="Adicione suas hashtags aqui">
+        </div>
+
+        <div class="form-group">
+
+          <label for="tema">Tema</label>
+          <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)="findByIdTema">
+            <option *ngFor="let item of listaTemas" value="{{item.idTema}}" >{{item.categoria}}</option>
+            <option  value="">Escolha um tema</option>
+            <!-- <option  value="">Solar</option>
+            <option  value="">Eólica</option>
+            <option  value="">Hídrica</option>
+            <option  value="">Biomassa</option> -->
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
