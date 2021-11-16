@@ -42,7 +42,7 @@ export class PostagemService {
   }
 }
 headers: new HttpHeaders().set('Autorization', environment.token)
-  }
+
 
   getAllPostagens(): Observable<Postagem[]>{
     return this.http.get<Postagem[]>('https://empowerenergyprojeto.herokuapp.com/api/v1/postagem/todos', this.token)
@@ -51,10 +51,4 @@ headers: new HttpHeaders().set('Autorization', environment.token)
   postPostagem(postagem: Postagem): Observable<Postagem>{
     return this.http.post<Postagem>('https://empowerenergyprojeto.herokuapp.com/api/v1/postagem/salvar', this.token)
   }
-
-
-
-
-
-}
 
