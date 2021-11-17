@@ -59,14 +59,14 @@
             </div>
 
             <div class="mr-3">
-              <small class="text-muted">Data: {{item.dataPostagem}}</small>
+              <small class="text-muted">Data: {{item.dataPostagem | date: 'dd/MM/yyyy'}} às {{item.dataPostagem | date: 'HH:mm'}} </small>
             </div>
           </div>
 
           <div class="col-md-1 pl-0">
-            <a data-toggle="modal" data-target="#editarPostagem" href="#editarPostagem"><i class="fa fa-pencil mr-1"  aria-hidden="true" (click)="findByIdPostagem(item.idPostagem)"></i></a>
+            <a *ngIf='idUser === item.usuario.idUsuario' data-toggle="modal" data-target="#editarPostagem" href="#editarPostagem"><i class="fa fa-pencil mr-1"  aria-hidden="true" (click)="findByIdPostagem(item.idPostagem)"></i></a>
 
-            <a><i class="fa fa-trash ml-2" style="color:red" aria-hidden="true" (click)="deletarPostagem()"></i></a>
+            <a *ngIf='idUser === item.usuario.idUsuario' class="cursor-pointer"><i class="fa fa-trash ml-2" style="color:red; cursor: pointer;" aria-hidden="true" (click)="deletarPostagem(idPostagem)"></i></a>
           </div>
 
           <div class="row d-flex justify-content-center w-100 mt-3 mx-0">
@@ -78,7 +78,7 @@
                   </div>
 
                   <div class="col-md-2 d-flex justify-content-end">
-                    <button type="button" class="btn btn-outline-success">{{item.tema.tema}}</button>
+                    <button  ngClass="item.tema.tema === 'Solar' ? btn btn-outline-warning : btn btn-outline-info" type="button" class="btn btn-outline-success">{{item.tema.tema}}</button>
                   </div>
                 </div>
 
