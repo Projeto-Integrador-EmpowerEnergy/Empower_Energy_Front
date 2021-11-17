@@ -1,10 +1,9 @@
 <app-menu-lat-esq *ngIf='auth.logado()'></app-menu-lat-esq>
 
-<app-menu-lateral-dir *ngIf='auth.logado()'></app-menu-lateral-dir>
+<router-outlet></router-outlet>
 
 <app-perfil *ngIf='auth.logado()'></app-perfil>
 
-<router-outlet></router-outlet>
-
+<app-menu-lateral-dir *ngIf='auth.logado()'></app-menu-lateral-dir>
 
 
