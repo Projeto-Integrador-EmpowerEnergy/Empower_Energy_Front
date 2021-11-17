@@ -2,8 +2,8 @@
 
 /* min-height: 100vh; */
    
-height: 200px;
- width: 300px;
+height: 190px;
+ width: 200px;
  right: 100px;
 /* background-position: center; */
    background-repeat: no-repeat;
@@ -11,7 +11,7 @@ height: 200px;
 }
 
 .tm{
-    margin-top: -30px;
+    margin-top: -20px;
 }
 
 
@@ -20,9 +20,9 @@ height: 200px;
     /* height: 100%; */
     /* width: 100%; */
 
-    min-height: 90px;
-    height: 100%;
-    width: 100%;
+    /* min-height: 500px; */
+    height: 65%;
+    width: 110%;
 
     background-position: center;
     background-repeat: no-repeat;
