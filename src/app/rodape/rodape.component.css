@@ -1,0 +1,21 @@
+.codepen {
+    margin-top: 30px;
+/*     width: 554px; */
+}
+
+.card-wrap {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 0 15px 9px rgba(0,0,0,.05);
+    font-family: Montserrat,sans-serif;
+    height: 370px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.card-wrap:hover {
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.05);
+}
+
+
+
