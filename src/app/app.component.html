@@ -1,15 +1,23 @@
+<!-- <app-sobre-nos></app-sobre-nos> -->
+<router-outlet></router-outlet>
+
 <app-menu-lat-esq *ngIf='auth.logado()'></app-menu-lat-esq>
 
-<app-menu-lateral-dir *ngIf='auth.logado()'></app-menu-lateral-dir>
+<!-- <app-menu-lateral-dir *ngIf='auth.logado()'></app-menu-lateral-dir> -->
 
 <!-- <app-landing></app-landing> -->
 
 <!-- <app-entrar></app-entrar>  -->
 
-<router-outlet></router-outlet>
+<!-- <app-cadastrar></app-cadastrar> -->
+
+<app-navbar *ngIf='auth.logado()'></app-navbar>
+
+<app-perfil *ngIf='auth.logado()'></app-perfil>
+
+
 
 <!-- <app-entrar></app-entrar> -->
 
- <app-perfil *ngIf='auth.logado()'></app-perfil>
 
 
