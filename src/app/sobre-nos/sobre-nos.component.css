@@ -12,16 +12,30 @@
 font-size: 80px;
 background-color: #81ecec;
 top: 10px;
+size: 80px;
 }
 .div-sobre{
-  background-color: #81ecec;
+  background-color: transparent !important;
   margin-bottom: 0%;
 }
 .carrosel-borda{
   border-radius: 100px;
+  max-height: 200px;
 }
 .borda-da-barra-de-inicio-margin-top{
 background-color: #81ecec;
 position: absolute;
 }
+.card-classe{
+size: 100px;
+}
 
+.img-centralizada{
+  right: 100px;
+}
+.altura-img{
+  height: 750px;
+}
+.btn-space{
+padding: 0.25rem;
+}
