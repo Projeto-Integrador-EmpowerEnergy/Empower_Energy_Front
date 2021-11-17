@@ -8,11 +8,33 @@ html, body{
   color: #1f4568;
 }
 
+.header__logo{
+  min-height: 1vh;
+  height: 5px;
+  width: 5%;
+
+
+}
+
 body{
 background-image: url("https://image.ibb.co/de6JzG/bitmap_1_1.png");
   background-size:cover;
   background-repeat:no-repeat;
   background-position: center;
+}
+
+.tm{
+ 
+  
+  
+}
+
+.site__title{
+  color: #eaebed;
+}
+
+.site__subtitle{
+  color: #eaebed;
 }
 
 /* colors 8a3aff, 6f79ff, 3a9fff black-> 1f4568  grey->8198ae*/

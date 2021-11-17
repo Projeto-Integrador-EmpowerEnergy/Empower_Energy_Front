@@ -23,10 +23,10 @@
 img{
 
      min-height: 5vh;
-     height: 200px;
-     width: 100%;
-     left: 100px;
-    background-position: center;
+     height: 150px;
+     width: 55%;
+    
+    background-position:left;
     background-repeat: no-repeat;
     background-size:cover;
     }
