@@ -16,6 +16,12 @@ export class TemaService {
     headers: new HttpHeaders().set('Autorization', environment.token)
   }
 
+  refreshToken(){
+    this.token = {
+      headers: new HttpHeaders().set('Authorization', environment.token)
+    }
+  }
+
   getAllTema(): Observable<Tema[]>{
     return this.http.get<Tema[]>('https://empowerenergyprojeto.herokuapp.com/api/v1/tema/todas', this.token)
   }
