@@ -19,3 +19,15 @@
 .verde{
     color: #00b295;
 }
+
+img{
+
+     min-height: 5vh;
+     height: 150px;
+     width: 55%;
+    
+    background-position:left;
+    background-repeat: no-repeat;
+    background-size:cover;
+    }
+
