@@ -36,6 +36,8 @@ import { MenuLateralDirComponent } from './menu-lateral-dir/menu-lateral-dir.com
 
     CadastrarComponent,
     InicioComponent,
+
+    InicioComponent,
     MenuLatEsqComponent,
     PostagemEditComponent,
     MenuLateralDirComponent
