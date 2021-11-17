@@ -106,18 +106,13 @@ export class InicioComponent implements OnInit {
     this.tema.idTema = this.idTema
     this.postagem.tema = this.tema
 
+    console.log(this.idPostagem)
+
     this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       alert('Postagem atualizada com sucesso!')
       this.postagem = new Postagem()
       this.tema = new Tema()
-      this.getAllPostagens()
-    })
-  }
-
-  deletarPostagem(){
-    this.postagemService.deletePostagem(this.postagem.idPostagem).subscribe(() => {
-      alert('Tem certeza que você quer excluir esta postagem?')
       this.getAllPostagens()
     })
   }
@@ -130,4 +125,13 @@ export class InicioComponent implements OnInit {
     })
   }
 
+  deletarPostagem(idPostagem: number){
+    console.log(idPostagem)
+
+    alert('Tem certeza que você quer excluir esta postagem?')
+    this.postagemService.deletePostagem(idPostagem).subscribe(() => {
+      alert('Postagem excluída com sucesso!')
+      this.getAllPostagens()
+    })
+  }
 }
