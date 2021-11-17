@@ -6,6 +6,14 @@
   text-decoration: none;
 }
 
+.posicionamento{
+  position: absolute;
+  top: 60px;
+  height: 80vh;
+  width: 20%;
+  right: 0px;
+}
+
 /* SIDEBAR */
 .wrapper-right {
   display: flex;
@@ -13,9 +21,9 @@
 }
 .wrapper-right .sidebar-right {
   position: fixed;
-  right:0;
-  width: 200px;
-  height: 100%;
+  /* right:900px; */
+  width: 80px;
+  height: 80px;
   background-color: #ffffff;
   font-size: 19px;
   border-right: 0.5px solid #e6ecf0;
@@ -26,7 +34,7 @@
     position: fixed;
     width: 220px;
     height: 100%;
-    left: 0;
+    right: -40px;
     overflow-x: hidden;
     overflow-y: auto;
     background: #ffffff;
@@ -39,17 +47,19 @@ input {
   overflow: visible;
 }
 
-/* BOX-SHARE */
+/* BOX-SHARE TAMANHO*/
 .box-share {
-  /* margin: 20px; */
-  /* margin-right: 60px; */
+  width: 340px;
+  height: -90px;
+   /* margin: 20px; */
+  margin-right: 60px;
   border-radius: 10px;
   background-color: #eaebed;
 }
 
 .grid-share {
   padding: 10px;
-  margin-top: 10px;
+  margin-top: -10px;
   display: grid;
   grid-template-columns: 18% 60% auto;
   transition: 0.5s;
@@ -95,9 +105,7 @@ input {
 
 
 /* SEGUNDA SIDEBAR */
-:root {
-  --mainColor: #6696ee;
-}
+
 * {
   margin: 0;
   padding: 0;
@@ -111,10 +119,12 @@ section {
   margin: -50px auto;
   padding: 25px 35px;
   border: 2px solid var(--mainColor);
+   /* margin-right: 90px */
 }
 section > div {
   position: relative;
   margin-block: 45px;
+  width: 300px;
 }
 section div .heading {
   width: fit-content;
@@ -161,7 +171,7 @@ section .list ul li::after {
 }
 section .gallery .content {
   display: flex;
-  align-items: center;
+  align-items:center;
   flex-flow: row wrap;
   gap: 10px;
 }
@@ -185,8 +195,8 @@ section .archives ul li::marker {
 }
 
 section .sidebar-container {
-  position: fixed;
-  width: 220px;
+  /* position: fixed; */
+  width: 720px;
   height: 100%;
   margin-right: 100px;
   overflow-x: hidden;
