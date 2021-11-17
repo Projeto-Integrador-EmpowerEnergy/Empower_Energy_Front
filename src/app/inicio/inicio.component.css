@@ -1,0 +1,19 @@
+.margint-10{
+  margin-top: 10%;
+}
+
+.postagem-container{
+  background-color: #f3f2ef;
+  height: auto;
+}
+
+.size-img{
+  width: 25px;
+  height: 25px;
+}
+
+#img-rouded{
+  border: 2px solid black;
+  border-radius: 50%;
+}
+

@@ -18,6 +18,9 @@ import { PerfilComponent } from './perfil/perfil.component';
 
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { MenuLatEsqComponent } from './menu-lat-esq/menu-lat-esq.component';
+import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
+import { MenuLateralDirComponent } from './menu-lateral-dir/menu-lateral-dir.component';
 
 
 @NgModule({
@@ -32,7 +35,12 @@ import { InicioComponent } from './inicio/inicio.component';
     PerfilComponent,
 
     CadastrarComponent,
-    InicioComponent
+    InicioComponent,
+
+    InicioComponent,
+    MenuLatEsqComponent,
+    PostagemEditComponent,
+    MenuLateralDirComponent
 
   ],
   imports: [
