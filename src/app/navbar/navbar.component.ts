@@ -17,10 +17,15 @@ export class NavbarComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+/*     if(environment.token == ''){
+      // alert('Sua sessão expirou, faça o login novamente!')
+      this.router.navigate(['landing'])
+    }
+ */
   }
 
   sair(){
-    this.router.navigate(['entrar'])
+    this.router.navigate(['landing'])
     environment.token = ''
     environment.nome = ''
     environment.foto = ''
