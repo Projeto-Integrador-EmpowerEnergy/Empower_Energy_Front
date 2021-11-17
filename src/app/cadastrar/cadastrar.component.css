@@ -1,33 +1,36 @@
-img{
+.imagemLogo{
 
 /* min-height: 100vh; */
    
-height: 160px;
- width: 100%;
- left: 100px;
+height: 200px;
+ width: 300px;
+ right: 100px;
 /* background-position: center; */
    background-repeat: no-repeat;
    background-size:cover;
 }
 
-
-
-#cad{
-       color: #C2A83E;
-
+.tm{
+    margin-top: -30px;
 }
 
 
-#img-bg{
+
+.bg{
     /* height: 100%; */
     /* width: 100%; */
 
-    min-height: 900px;
-    height: 100px;
-    width: 100px;
+    min-height: 90px;
+    height: 100%;
+    width: 100%;
 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+}
+
+#cad{
+    color: #C2A83E;
 
 }
