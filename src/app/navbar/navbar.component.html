@@ -1,24 +1,17 @@
-<div>
+<div class="container-fluid fixed-top mb-5"  style="background-color: rgb(230, 227, 227);">
   <!-- criação da navBar -->
-  <div class="container">
-    <nav class="navbar navbar-expand-lg">
-      <p class="form-check-inline"><img src="" alt="Logo" /></p>
+  
+    <nav class="navbar navbar-expand-lg ">
+      <p class="form-check-inline"></p>
       <form class="my-2 my-lg-0">
+        <a><i class="fa fa-search" aria-hidden="true" style="margin: 20px;"></i></a>
         <input
-          class="border-0"
+          class="border border-secondary"
           type="search"
           placeholder="Search"
           aria-label="Search"
-          style="background-color: rgb(155, 150, 150)"
-        />
+          />
       </form>
-
-      <div style="margin-left: 40vw">
-        <a class="navbar-brand text-dark" href="#">
-          <i class="fa fa-home fa-1x" aria-hidden="true"> </i>
-          Home
-        </a>
-      </div>
 
       <button
         class="navbar-toggler"
@@ -32,7 +25,18 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div style="margin-left: 50vw;">
+        <a class="navbar-brand text-dark" routerLink="\laging">
+          <i class="fa fa-home fa-1x" aria-hidden="true"> </i>
+          Home
+        </a>
+      </div>
+
+      <div
+        class="collapse navbar-collapse"
+        id="navbarSupportedContent"
+        class="margin-left: 40px"
+      >
         <ul class="navbar-nav mr-auto">
           <div>
             <li class="nav-item active">
@@ -43,31 +47,22 @@
             </li>
           </div>
 
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="#">
-              <i class="fa fa-comments" aria-hidden="true"></i> Mensagens</a
-            >
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle text-dark"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <i class="fa fa-user-o" aria-hidden="true"></i>
-              Perfil
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" routerLink="/perfil">Action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Sair</a>
-            </div>
-          </li>
+          <div  class="margin-left: 40px">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">
+                <i class="fa fa-comments" aria-hidden="true"></i> Mensagens</a
+              >
+            </li>
+          </div>
+          <div  class="margin-left: 40px">
+            <li class="nav-item">
+              <a class="nav-link text-dark" routerLink= "/perfil">
+                <i class="fa fa-user-o" aria-hidden="true"></i> Perfil </a
+              >
+            </li>
+          </div>
         </ul>
       </div>
     </nav>
-  </div>
+  
 </div>
