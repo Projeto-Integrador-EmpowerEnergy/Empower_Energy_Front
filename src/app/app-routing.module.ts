@@ -8,7 +8,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'entrar', pathMatch: 'full'},
+  {path: '', redirectTo: 'landing', pathMatch: 'full'},
   {path: 'entrar', component: EntrarComponent},
   {path: 'cadastrar', component: CadastrarComponent},
   {path: 'inicio', component: InicioComponent},

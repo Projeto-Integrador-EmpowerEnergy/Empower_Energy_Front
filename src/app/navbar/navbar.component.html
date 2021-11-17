@@ -1,68 +1,96 @@
-<div class="container-fluid fixed-top mb-5"  style="background-color: rgb(230, 227, 227);">
+<div
+  class="container-fluid fixed-top mb-5"
+  style="background-color: rgb(230, 227, 227)"
+>
   <!-- criação da navBar -->
-  
-    <nav class="navbar navbar-expand-lg ">
-      <p class="form-check-inline"></p>
-      <form class="my-2 my-lg-0">
-        <a><i class="fa fa-search" aria-hidden="true" style="margin: 20px;"></i></a>
-        <input
-          class="border border-secondary"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-          />
-      </form>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <nav class="navbar navbar-expand-lg">
+    <form style="width: 400px" class="my-1 my-lg-0">
+      <a
+        ><i class="fa fa-search" aria-hidden="true" style="margin: 20px"></i
+      ></a>
+      <input
+        class="border border-secondary"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+    </form>
 
-      <div style="margin-left: 50vw;">
-        <a class="navbar-brand text-dark" routerLink="\laging">
-          <i class="fa fa-home fa-1x" aria-hidden="true"> </i>
-          Home
-        </a>
-      </div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div
-        class="collapse navbar-collapse"
-        id="navbarSupportedContent"
-        class="margin-left: 40px"
-      >
-        <ul class="navbar-nav mr-auto">
-          <div>
-            <li class="nav-item active">
-              <a class="nav-link text-dark" href="#">
+    <div style="margin-left: 45vw">
+      <a style="font-size: 16px;" class="navbar-brand text-dark" routerLink="\landing">
+        <div class="d-flex justify-content-center">
+          <i class="fa fa-home fa-lg fs-1" aria-hidden="true"> </i>
+        </div>
+        Home
+      </a>
+    </div>
+
+    <div
+      class="collapse navbar-collapse"
+      id="navbarSupportedContent"
+      class="margin-left: 40px"
+    >
+      <ul class="navbar-nav mr-auto">
+        <div class="">
+          <li class="nav-item active">
+            <a class="nav-link text-dark" href="#">
+              <div class="d-flex justify-content-center">
                 <i class="fa fa-window-restore" aria-hidden="true"></i>
-                Projetos <span class="sr-only">(current)</span>
-              </a>
-            </li>
-          </div>
+              </div>
+              <div>Projetos <span class="sr-only">(current)</span></div>
+            </a>
+          </li>
+        </div>
+        <!-- botões da navbar -->
+        <div class="margin-left: 40px">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#">
+              <div class="d-flex justify-content-center">
+                <i class="text-center fa fa-comments fa-lg" aria-hidden="true">
+                </i>
+              </div>
+              Mensagens
+            </a>
+          </li>
+        </div>
 
-          <div  class="margin-left: 40px">
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="#">
-                <i class="fa fa-comments" aria-hidden="true"></i> Mensagens</a
-              >
-            </li>
-          </div>
-          <div  class="margin-left: 40px">
-            <li class="nav-item">
-              <a class="nav-link text-dark" routerLink= "/perfil">
-                <i class="fa fa-user-o" aria-hidden="true"></i> Perfil </a
-              >
-            </li>
-          </div>
-        </ul>
-      </div>
-    </nav>
-  
+        <div class="margin-left: 40px">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#">
+              <div class="d-flex justify-content-center">
+                <i class="text-center fa fa-user fa-lg" aria-hidden="true">
+                </i>
+              </div>
+              Perfil
+            </a>
+          </li>
+        </div>
+
+        <div class="margin-left: 40px">
+          <li class="nav-item fs-20">
+            <a class="nav-link text-dark" (click)="sair()">
+              <div class="d-flex justify-content-center">
+              <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
+            </div>
+            Sair
+            </a>
+          </li>
+        </div>
+        <!-- botões da navbar -->
+      </ul>
+    </div>
+  </nav>
 </div>
