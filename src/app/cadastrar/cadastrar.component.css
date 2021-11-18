@@ -1,26 +1,25 @@
-.imagemLogo{
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
 
-/* min-height: 100vh; */
+.imagemLogo{
+    min-height: 5vh;
+    height: 150px;
+    width: 55%;
    
-height: 190px;
- width: 330px;
- right: 100px;
-/* background-position: center; */
+   background-position:left;
    background-repeat: no-repeat;
    background-size:cover;
 }
 
 .tm{
-    margin-top: -20px;
+    margin-top: -27px;
 }
 
-
-
 .bg{
-    /* height: 100%; */
-    /* width: 100%; */
-
-    /* min-height: 500px; */
     height: 65%;
     width: 110%;
 
@@ -34,3 +33,4 @@ height: 190px;
     color: #C2A83E;
 
 }
+

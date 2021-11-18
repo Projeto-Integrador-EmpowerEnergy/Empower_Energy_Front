@@ -1,35 +1,25 @@
-<div class="container-fluid" style="background-color: #eaebed">
+<div class="container-fluid" style="background-color: #eaebed ; height:100vh; ">
   <div class="row">
-    
-    
-    <!-- <div class="col-md-6 d-flex flex-column">
-      <img class="imagemLogo"
-        src="('../../../../assets/img/logo2.png "
+
+    <div class="tm container col-md-6 d-flex flex-column">
+      <img
+        class="imagemLogo"
+        src="/assets/img/logo2.png"
         alt="foto do cadastro"
       />
-    </div> -->
 
-    <div class="container col-md-6 d-flex flex-column"> 
-      <img class="imagemLogo"
-        src="('../../../../assets/img/logo2.png "
-        alt="foto do cadastro"/>
-
-      <img class="tm bg"
+      <img
+        class="tm bg"
         src="('../../../../assets/img/fotoCadastrar5-removebg-preview.png "
-        alt="foto do cadastro2" />
-        
+        alt="foto do cadastro2"
+      />
     </div>
 
-    <div class="col-md-6 mt-5 mb-5">
+    <div class="col-md-6 mt-10">
       <div class="row d-flex justify-content-center">
         <div class="col-md-10">
-          <div class="row mb-5 pl-3">
-            <!-- <h1 id="emp">Empower</h1> -->
-            <!-- <h1 id="cad">Energy</h1> -->
-          </div>
-
-
-          <h1 class="text-center" id="cad">Cadastre-se</h1>
+        
+          <h3 class="text-center mb-0 mt-3" id="cad">Cadastre-se</h3>
           <!-- <h4 class="text-center" >Bem-vindes</h4> -->
 
           <div class="form-group">
@@ -68,17 +58,30 @@
             />
           </div>
 
-          <div class="form-group">
-            <label for="idade">Idade</label>
-            <input
-              [(ngModel)]="user.idadeUsuario"
-              class="form-control"
-              type="number"
-              name="idade"
-              id="idade"
-              placeholder="Insira a sua Idade"
-            />
+          <div class="d-flex justify-content-between w-100">
+            <div class="form-group pr-1 w-50">
+              <label for="idade">Idade</label>
+              <input
+                [(ngModel)]="user.idadeUsuario"
+                class="form-control"
+                type="number"
+                name="idade"
+                id="idade"
+                placeholder="Insira a sua Idade"
+              />
+            </div>
+
+            <div class="form-group w-50">
+              <label for="tipo">Tipo de Usuario:</label>
+              <select class="form-control" name="tipo" id="tipo">
+                <option>Selecione um tipo de usuario:</option>
+                <option value="normal">Normal</option>
+                <option value="adm">Administrador</option>
+              </select>
+            </div>
+
           </div>
+          
 
           <div class="form-group">
             <label for="foto">Link da Foto</label>
@@ -92,39 +95,34 @@
             />
           </div>
 
-         <div class="d-flex justify-content-between w-100">
-          <div class="form-group">
-            <label for="senha">Senha</label>
-            <input
-              (input)="confirmSenha($event)"
-              class="form-control"
-              type="password"
-              name="senha"
-              id="senha"
-              placeholder="Insira a sua Senha"
-            />
+          <div class="d-flex justify-content-between w-100">
+            <div class="form-group w-50 pr-1 mb-0">
+              <label for="senha">Senha</label>
+              <input
+                (input)="confirmSenha($event)"
+                class="form-control"
+                type="password"
+                name="senha"
+                id="senha"
+                placeholder="Insira a sua Senha"
+              />
+            </div>
+
+            <div class="form-group w-50 mb-0">
+              <label for="confirmSenha">Confirme sua Senha</label>
+              <input
+                [(ngModel)]="user.senhaUsuario"
+                class="form-control"
+                type="password"
+                name="confirmSenha"
+                id="confirmSenha"
+                placeholder="Insira a sua Senha"
+              />
+            </div>
           </div>
 
           <div class="form-group">
-            <label for="confirmSenha">Confirme sua Senha</label>
-            <input
-              [(ngModel)]="user.senhaUsuario"
-              class="form-control"
-              type="password"
-              name="confirmSenha"
-              id="confirmSenha"
-              placeholder="Insira a sua Senha"
-            />
-          </div>
-         </div>
-
-          <div class="form-group">
-            <label for="tipo">Tipo de Usuario:</label>
-            <select class="form-control" name="tipo" id="tipo">
-              <option>Selecione um tipo de usuario:</option>
-              <option value="normal">Normal</option>
-              <option value="adm">Administrador</option>
-            </select>
+           
           </div>
 
           <div class="d-flex justify-content-center">
