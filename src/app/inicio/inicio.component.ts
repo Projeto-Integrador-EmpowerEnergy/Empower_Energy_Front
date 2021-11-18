@@ -35,6 +35,9 @@ export class InicioComponent implements OnInit {
   nomeUsuario = environment.nome
   userLogin: UserLogin = new UserLogin
 
+  key = 'data'
+  reverse = true
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -107,8 +110,6 @@ export class InicioComponent implements OnInit {
     this.tema.idTema = this.idTema
     this.postagem.tema = this.tema
 
-    console.log(this.idPostagem)
-
     this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       alert('Postagem atualizada com sucesso!')
@@ -121,16 +122,13 @@ export class InicioComponent implements OnInit {
   findByIdPostagem(idPostagem: number){
     alert('Deseja editar essa postagem?')
     this.postagemService.getByIdPostagem(idPostagem).subscribe((resp: Postagem) => {
-
       this.postagem = resp
     })
   }
 
-  deletarPostagem(){
-    console.log(this.idPostagem)
-
+  deletarPostagem(id: number){
     alert('Tem certeza que você quer excluir esta postagem?')
-    this.postagemService.deletePostagem(this.idDelete).subscribe(() => {
+    this.postagemService.deletePostagem(id).subscribe(() => {
       alert('Postagem excluída com sucesso!')
       this.getAllPostagens()
     })
