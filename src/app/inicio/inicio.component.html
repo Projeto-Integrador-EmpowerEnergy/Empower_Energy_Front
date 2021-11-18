@@ -78,7 +78,7 @@
                   </div>
 
                   <div class="col-md-2 d-flex justify-content-end">
-                    <button  ngClass="item.tema.tema === 'Solar' ? btn btn-outline-warning : btn btn-outline-info" type="button" class="btn btn-outline-success">{{item.tema.tema}}</button>
+                    <button ngSwitch="item.tema.tema : " type="button" class="btn btn-outline-success">{{item.tema.tema}}</button> <!-- ngClass="item.tema.tema === 'Solar' ? btn btn-outline-warning : btn btn-outline-info" -->
                   </div>
                 </div>
 
@@ -122,12 +122,18 @@
 
         <div class="form-group">
           <label for="título">Título</label>
-          <input [(ngModel)]='postagem.titulo' class="form-control" name="título" id="título"  rows="1" placeholder="Digite seu título aqui">
+          <input [(ngModel)]='postagem.titulo' type="text" class="form-control is-invalid" value="text" name="título" id="título" rows="1" placeholder="Digite seu título aqui" required>
+          <div class="invalid-feedback">
+            Please enter a message in the textarea.
+          </div>
         </div>
 
         <div class="form-group">
           <label for="texto">Texto</label>
-          <textarea [(ngModel)]='postagem.descricao' class="form-control" name="texto" id="texto"  rows="3" placeholder="Digite seu texto aqui"></textarea>
+          <textarea [(ngModel)]='postagem.descricao' type='text' class="form-control is-invalid" value='' name="texto" id="texto"  rows="3" placeholder="Digite seu texto aqui" required></textarea>
+          <div class="invalid-feedback">
+            Por favor, digite um texto entre 5 e 500 caracteres.
+          </div>
         </div>
 
         <div class="form-group">
