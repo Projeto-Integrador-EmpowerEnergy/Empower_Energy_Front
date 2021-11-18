@@ -62,7 +62,7 @@
     left: 0;
     top: 0;
     -webkit-transition: width 0.2s ease-in;
-    transition: width 0.2s ease-in;
+    transition: width 0.3s ease-in;
     width: 3px;
     z-index: -1;
   }
