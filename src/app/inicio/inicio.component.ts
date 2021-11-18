@@ -95,12 +95,17 @@ export class InicioComponent implements OnInit {
     this.tema.idTema = this.idTema
     this.postagem.tema = this.tema
 
-    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
+
+    /* if(this.postagem.titulo == '' || this.postagem.titulo == null) {
+      alert('É necessário preencher Título, Texto e Tema!')
+    } else { */
+      this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
-    })
+      })
+    /* } */
   }
 
   editarPostagem(){

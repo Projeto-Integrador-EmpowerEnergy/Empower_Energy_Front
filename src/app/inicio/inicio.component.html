@@ -192,8 +192,7 @@
           <input
             [(ngModel)]="postagem.titulo"
             type="text"
-            class="form-control is-invalid"
-            value="text"
+            class="form-control"
             name="título"
             id="título"
             rows="1"
@@ -201,7 +200,7 @@
             required
           />
           <div class="invalid-feedback">
-            Please enter a message in the textarea.
+            Por favor, digite um título para sua postagem.
           </div>
         </div>
 
@@ -210,7 +209,7 @@
           <textarea
             [(ngModel)]="postagem.descricao"
             type="text"
-            class="form-control is-invalid"
+            class="form-control"
             value=""
             name="texto"
             id="texto"
@@ -263,15 +262,18 @@
               {{ item.tema }}
             </option>
           </select>
+          <div class="invalid-feedback">
+            Por favor, selecione um tema.
+          </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
           Cancelar
         </button>
         <button
           type="button"
-          class="btn btn-primary"
+          class="btn btn-success"
           (click)="publicarPostagem()"
           data-dismiss="modal"
         >
@@ -380,3 +382,5 @@
     </div>
   </div>
 </div>
+
+
