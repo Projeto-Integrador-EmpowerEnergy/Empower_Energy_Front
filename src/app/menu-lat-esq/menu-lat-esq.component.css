@@ -5,7 +5,7 @@
     left: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    background: #ffffff;
+    background: #EAEBED;
     color: #9593A0;
   }
 
@@ -108,7 +108,7 @@
   margin-top: 5cm;
 }
 
-/* barra de rolagem */
+/* barra de rolagem
 *::-webkit-scrollbar {
   width: 10px;
 }
@@ -126,4 +126,4 @@
 :root {
   scrollbar-color: #E3E3E3 #1D1C1A !important;
   scrollbar-width: thin !important;
-}
+} */
