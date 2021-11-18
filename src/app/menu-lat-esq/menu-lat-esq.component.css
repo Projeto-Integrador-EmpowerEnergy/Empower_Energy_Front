@@ -52,7 +52,7 @@
     outline: none;
   }
 
-
+/* cor da nav bar */
   .sidebar-navigation li::before  {
     background-color:  #57AE09;
     color:  #ffffff;
@@ -71,6 +71,28 @@
     width: 100%;
 
   }
+
+  .sidebar-navigation-projeto li::before  {
+    background-color:  #57AE09;
+    color:  #ffffff;
+    position: absolute;
+    content: '';
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-transition: width 0.2s ease-in;
+    transition: width 0.3s ease-in;
+    width: 3px;
+    z-index: -1;
+  }
+
+  .sidebar-navigation-projeto li:hover::before {
+    width: 100%;
+
+  }
+
+
+  /* cor da navbar */
 
   .sidebar-navigation li a:hover{
     color: #ffffff;
