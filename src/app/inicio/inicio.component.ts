@@ -23,6 +23,7 @@ export class InicioComponent implements OnInit {
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
   idPostagem: number
+  idDelete: number
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
@@ -125,11 +126,11 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  deletarPostagem(idPostagem: number){
-    console.log(idPostagem)
+  deletarPostagem(){
+    console.log(this.idPostagem)
 
     alert('Tem certeza que você quer excluir esta postagem?')
-    this.postagemService.deletePostagem(idPostagem).subscribe(() => {
+    this.postagemService.deletePostagem(this.idDelete).subscribe(() => {
       alert('Postagem excluída com sucesso!')
       this.getAllPostagens()
     })
