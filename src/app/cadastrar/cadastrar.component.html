@@ -18,7 +18,7 @@
     <div class="col-md-6 mt-10">
       <div class="row d-flex justify-content-center">
         <div class="col-md-10">
-        
+
           <h3 class="text-center mb-0 mt-3" id="cad">Cadastre-se</h3>
           <!-- <h4 class="text-center" >Bem-vindes</h4> -->
 
@@ -73,7 +73,7 @@
 
             <div class="form-group w-50">
               <label for="tipo">Tipo de Usuario:</label>
-              <select class="form-control" name="tipo" id="tipo">
+              <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
                 <option>Selecione um tipo de usuario:</option>
                 <option value="normal">Normal</option>
                 <option value="adm">Administrador</option>
@@ -81,7 +81,7 @@
             </div>
 
           </div>
-          
+
 
           <div class="form-group">
             <label for="foto">Link da Foto</label>
@@ -122,7 +122,7 @@
           </div>
 
           <div class="form-group">
-           
+
           </div>
 
           <div class="d-flex justify-content-center">
