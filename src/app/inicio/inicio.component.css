@@ -5,6 +5,14 @@
 .postagem-container{
   background-color: #EAEBED;
   height: auto;
+  /* width: 100vw; */
+ margin-left: -45px;
+}
+
+.tam{
+  margin-left: -15px;
+  height: auto;
+  /* margin-right: -1100px; */
 }
 
 .size-img{

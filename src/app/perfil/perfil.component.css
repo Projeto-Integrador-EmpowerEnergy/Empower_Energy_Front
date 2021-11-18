@@ -1,12 +1,16 @@
 .tm{
     width: 200px;
     height: 200px;
-    margin-top: -100px;
+    margin-top: -180px;
 }
 
 .tm-2{
     width: 200px;
     height: 200px;
-    margin-right: -450px;
+    margin-right: -440px;
     margin-top: -150px;
+}
+
+.perfil{
+    margin-left: 173px;
 }
