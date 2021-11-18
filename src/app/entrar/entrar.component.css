@@ -16,6 +16,10 @@
     color: #57AE09;
 }
 
+btn-outline:hover{
+    color: white; 
+}
+
 .verde{
     color: #00b295;
 }
