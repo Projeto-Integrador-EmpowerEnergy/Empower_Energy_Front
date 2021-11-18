@@ -1,10 +1,10 @@
 <div
-  class="container-fluid fixed-top mb-5"
+  class="container-fluid fixed-top mb-5 marginleft"
   style="background-color: rgb(230, 227, 227)"
 >
   <!-- criação da navBar -->
 
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand d-flex justify-content-between" style="width: 85%;" >
     <form style="width: 400px" class="my-1 my-lg-0">
       <a
         ><i class="fa fa-search" aria-hidden="true" style="margin: 20px"></i
@@ -29,68 +29,73 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div style="margin-left: 45vw">
-      <a style="font-size: 16px;" class="navbar-brand text-dark" routerLink="\landing">
-        <div class="d-flex justify-content-center">
-          <i class="fa fa-home fa-lg fs-1" aria-hidden="true"> </i>
-        </div>
-        Home
-      </a>
-    </div>
+    <div class="d-flex justify-content-end">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
 
-    <div
-      class="collapse navbar-collapse"
-      id="navbarSupportedContent"
-      class="margin-left: 40px"
-    >
-      <ul class="navbar-nav mr-auto">
-        <div class="">
-          <li class="nav-item active">
-            <a class="nav-link text-dark" href="#">
-              <div class="d-flex justify-content-center">
-                <i class="fa fa-window-restore" aria-hidden="true"></i>
-              </div>
-              <div>Projetos <span class="sr-only">(current)</span></div>
-            </a>
-          </li>
-        </div>
-        <!-- botões da navbar -->
-        <div class="margin-left: 40px">
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="#">
-              <div class="d-flex justify-content-center">
-                <i class="text-center fa fa-comments fa-lg" aria-hidden="true">
-                </i>
-              </div>
-              Mensagens
-            </a>
-          </li>
-        </div>
+          <div class="">
+            <li class="nav-item active">
+              <a class="nav-link text-dark" href="" routerLink="/inicio">
+                <div class="d-flex justify-content-center">
+                  <i class="fa fa-home fa-lg fs-1" aria-hidden="true"> </i>
+                </div>
+                <div>Home<span class="sr-only">(current)</span></div>
+              </a>
+            </li>
+          </div>
 
-        <div class="margin-left: 40px">
-          <li class="nav-item">
-            <a class="nav-link text-dark" href="#">
-              <div class="d-flex justify-content-center">
-                <i class="text-center fa fa-user fa-lg" aria-hidden="true">
-                </i>
-              </div>
-              Perfil
-            </a>
-          </li>
-        </div>
+          <div class="">
+            <li class="nav-item active">
+              <a class="nav-link text-dark" href="#">
+                <div class="d-flex justify-content-center">
+                  <i class="fa fa-window-restore" aria-hidden="true"></i>
+                </div>
+                <div>Projetos <span class="sr-only">(current)</span></div>
+              </a>
+            </li>
+          </div>
 
-        <div class="margin-left: 40px">
-          <li class="nav-item fs-20">
-            <a class="nav-link text-dark" (click)="sair()">
-              <div class="d-flex justify-content-center">
-              <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
-            </div>
-            Sair
-            </a>
-          </li>
-        </div>
-        <!-- botões da navbar -->
-      </ul>
+          <!-- botões da navbar -->
+          <div class="margin-left: 40px">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">
+                <div class="d-flex justify-content-center">
+                  <i
+                    class="text-center fa fa-comments fa-lg"
+                    aria-hidden="true"
+                  >
+                  </i>
+                </div>
+                Mensagens
+              </a>
+            </li>
+          </div>
+
+          <div class="margin-left: 40px">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#" routerLink="/perfil">
+                <div class="d-flex justify-content-center">
+                  <i class="text-center fa fa-user fa-lg" aria-hidden="true">
+                  </i>
+                </div>
+                Perfil
+              </a>
+            </li>
+          </div>
+
+          <div class="margin-left: 40px">
+            <li class="nav-item fs-20">
+              <a class="nav-link text-dark" (click)="sair()">
+                <div class="d-flex justify-content-center">
+                  <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
+                </div>
+                Sair
+              </a>
+            </li>
+          </div>
+          <!-- botões da navbar -->
+        </ul>
+      </div>
     </div>
   </nav>
 </div>
