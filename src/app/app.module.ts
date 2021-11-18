@@ -21,6 +21,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { MenuLatEsqComponent } from './menu-lat-esq/menu-lat-esq.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { MenuLateralDirComponent } from './menu-lateral-dir/menu-lateral-dir.component';
+import { OrderModule } from 'ngx-order-pipe';
 
 
 @NgModule({
@@ -48,8 +49,8 @@ import { MenuLateralDirComponent } from './menu-lateral-dir/menu-lateral-dir.com
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
-
+    FormsModule,
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
