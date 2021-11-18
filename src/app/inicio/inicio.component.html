@@ -39,7 +39,7 @@
 <!-- Cards -->
 <div class="container my-2">
   <div class="row d-flex justify-content-center">
-    <div class="col-md-8 p-0" *ngFor="let item of listaPostagens">
+    <div class="col-md-8 p-0" *ngFor="let item of listaPostagens | orderBy : key : reverse">
 
       <div class="postagem-container rounded p-0">
         <div class="row d-flex justify-content-center pt-3 mb-3 mx-0">
@@ -143,7 +143,7 @@
         <div class="form-group">
           <label for="tema">Tema</label>
           <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)="getAllTemas()">
-            <option *ngFor="let item of listaTemas" value="{{item.idTema}}">{{item.tema}}</option>
+            <option *ngFor="let item of listaTemas  | orderBy : key : reverse" value="{{item.idTema}}">{{item.tema}}</option>
           </select>
         </div>
 
@@ -192,7 +192,7 @@
 
           <label for="tema">Tema</label>
           <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)="getAllTemas()">
-            <option *ngFor="let item of listaTemas" value="{{item.idTema}}">{{item.tema}}</option>
+            <option *ngFor="let item of listaTemas  | orderBy : key : reverse" value="{{item.idTema}}">{{item.tema}}</option>
           </select>
         </div>
       </div>
