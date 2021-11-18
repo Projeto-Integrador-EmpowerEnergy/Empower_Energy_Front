@@ -1,10 +1,10 @@
 <div
-  class="container-fluid fixed-top mb-5"
+  class="container-fluid fixed-top mb-5 marginleft"
   style="background-color: rgb(230, 227, 227)"
 >
   <!-- criação da navBar -->
 
-  <nav class="navbar navbar-expand justify-content-between w-100">
+  <nav class="navbar navbar-expand d-flex justify-content-between" style="width: 85%;" >
     <form style="width: 400px" class="my-1 my-lg-0">
       <a
         ><i class="fa fa-search" aria-hidden="true" style="margin: 20px"></i
@@ -30,22 +30,20 @@
     </button>
 
     <div class="d-flex justify-content-end">
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <div>
-            <a
-          style="font-size: 16px"
-          class="navbar-brand text-dark"
-          href=""
-          routerLink="/inicio"
-        >
-          <div class="d-flex justify-content-center">
-            <i class="fa fa-home fa-lg fs-1" aria-hidden="true"> </i>
+
+          <div class="">
+            <li class="nav-item active">
+              <a class="nav-link text-dark" href="" routerLink="/inicio">
+                <div class="d-flex justify-content-center">
+                  <i class="fa fa-home fa-lg fs-1" aria-hidden="true"> </i>
+                </div>
+                <div>Home<span class="sr-only">(current)</span></div>
+              </a>
+            </li>
           </div>
-          Home
-        </a>
-          </div>
+
           <div class="">
             <li class="nav-item active">
               <a class="nav-link text-dark" href="#">
@@ -56,12 +54,16 @@
               </a>
             </li>
           </div>
+
           <!-- botões da navbar -->
           <div class="margin-left: 40px">
             <li class="nav-item">
               <a class="nav-link text-dark" href="#">
                 <div class="d-flex justify-content-center">
-                  <i class="text-center fa fa-comments fa-lg" aria-hidden="true">
+                  <i
+                    class="text-center fa fa-comments fa-lg"
+                    aria-hidden="true"
+                  >
                   </i>
                 </div>
                 Mensagens
@@ -73,7 +75,8 @@
             <li class="nav-item">
               <a class="nav-link text-dark" href="#" routerLink="/perfil">
                 <div class="d-flex justify-content-center">
-                  <i class="text-center fa fa-user fa-lg" aria-hidden="true"> </i>
+                  <i class="text-center fa fa-user fa-lg" aria-hidden="true">
+                  </i>
                 </div>
                 Perfil
               </a>
@@ -93,9 +96,6 @@
           <!-- botões da navbar -->
         </ul>
       </div>
-
     </div>
-
-
   </nav>
 </div>
