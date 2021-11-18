@@ -38,7 +38,7 @@ export class PostagemService {
   }
 
   deletePostagem(id: number){
-    return this.http.delete(`https://empowerenergyprojeto.herokuapp.com/ap1/v1/postagem/deletar/${id}`, this.token)
+    return this.http.delete(`https://empowerenergyprojeto.herokuapp.com/api/v1/postagem/deletar/${id}`, this.token)
   }
 
 }
