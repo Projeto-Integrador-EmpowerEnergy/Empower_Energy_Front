@@ -23,6 +23,7 @@ export class InicioComponent implements OnInit {
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
   idPostagem: number
+  idDelete: number
 
   tema: Tema = new Tema()
   listaTemas: Tema[]
@@ -94,12 +95,17 @@ export class InicioComponent implements OnInit {
     this.tema.idTema = this.idTema
     this.postagem.tema = this.tema
 
-    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
+
+    /* if(this.postagem.titulo == '' || this.postagem.titulo == null) {
+      alert('É necessário preencher Título, Texto e Tema!')
+    } else { */
+      this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
-    })
+      })
+    /* } */
   }
 
   editarPostagem(){
@@ -108,8 +114,6 @@ export class InicioComponent implements OnInit {
 
     this.tema.idTema = this.idTema
     this.postagem.tema = this.tema
-
-    console.log(this.idPostagem)
 
     this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
@@ -123,16 +127,13 @@ export class InicioComponent implements OnInit {
   findByIdPostagem(idPostagem: number){
     alert('Deseja editar essa postagem?')
     this.postagemService.getByIdPostagem(idPostagem).subscribe((resp: Postagem) => {
-
       this.postagem = resp
     })
   }
 
-  deletarPostagem(idPostagem: number){
-    console.log(idPostagem)
-
+  deletarPostagem(id: number){
     alert('Tem certeza que você quer excluir esta postagem?')
-    this.postagemService.deletePostagem(idPostagem).subscribe(() => {
+    this.postagemService.deletePostagem(id).subscribe(() => {
       alert('Postagem excluída com sucesso!')
       this.getAllPostagens()
     })

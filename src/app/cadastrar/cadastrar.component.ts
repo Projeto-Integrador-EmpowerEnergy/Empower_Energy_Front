@@ -37,7 +37,11 @@ export class CadastrarComponent implements OnInit {
     if(this.user.senhaUsuario != this.confirmarSenha){
       alert('As senhas estão incorretas!')
     } else {
-      console.log(this.user)
+
+      if(this.user.fotoUsuario == null || this.user.fotoUsuario == ''){
+        this.user.fotoUsuario = "/assets/img/user.png"
+      }
+
       this.authService.cadastrar(this.user).subscribe((resp: User) => {
         this.user = resp
         this.router.navigate(['/entrar'])

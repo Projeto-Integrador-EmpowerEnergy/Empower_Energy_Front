@@ -11,38 +11,175 @@
                   src="assets\img\exemplo capa.jfif"
                   alt="Imagem de capa do card"
                 />
-                <div class="col-md-6">
+                <div class="col-md-6" ><!-- *ngFor="let item of listaUsuarios" -->
                   <img
-                    src="https://i.imgur.com/24xNilF.jpg"
+                    src="{{ foto }}"
                     alt="..."
                     class="img-thumbnail tm"
-                    />
+                  />
                   <div class="container">
-                    <h1>Kauana Andrade</h1>
+                    <h1>{{ nome }} {{ sobrenome }}</h1> <!-- {{ item.sobrenomeUsuario }} -->
                     <p>
-                      Desenvolvedora Full Stack Jr | Java Developer | Scrum | Spring Boot | MySQL | Python | HTML | CSS | JS
+                      Desenvolvedora Full Stack Jr | Java Developer | Scrum |
+                      Spring Boot | MySQL | Python | HTML | CSS | JS
                     </p>
-                   
                   </div>
 
                   <div class="container-fluid tm-2">
-                    
-                    <a class="nav-link dropdown-toggle text-white btn btn-outline-success" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false" type="button" style="background-color: #57AE09;">
+                    <a
+                      class="
+                        nav-link
+                        dropdown-toggle
+                        text-white
+                        btn btn-outline-success
+                      "
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-toggle="modal"
+                      data-target="#editarUsuario"
+                      aria-expanded="false"
+                      type="button"
+                      style="background-color: #57ae09"
+                    >
                       Editar Perfil
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Sair</a>
-                    </div>
-                  
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edição Usuário -->
+<div class="modal" id="editarUsuario" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Editar Usuario</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input
+            [(ngModel)]="user.nomeUsuario"
+            type="text"
+            class="form-control"
+            name="nome"
+            id="nome"
+            rows="1"
+            placeholder="Digite seu nome aqui"
+            required
+          />
+          <div class="invalid-feedback">
+            Por favor, digite um título para sua user.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="sobrenome">Sobrenome</label>
+          <textarea
+            [(ngModel)]="user.sobrenomeUsuario"
+            type="text"
+            class="form-control"
+            value=""
+            name="sobrenome"
+            id="sobrenome"
+            rows="1"
+            placeholder="Digite seu sobrenome aqui"
+            required
+          ></textarea>
+          <div class="invalid-feedback">
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            [(ngModel)]="user.emailUsuario"
+            class="form-control"
+            name="email"
+            id="email"
+            rows="1"
+            placeholder="Digite seu email aqui"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="idade">Idade</label>
+          <input
+            [(ngModel)]="user.idadeUsuario"
+            class="form-control"
+            name="idade"
+            id="idade"
+            rows="1"
+            placeholder="Digite sua idade aqui"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="foto">Foto</label>
+          <input
+            [(ngModel)]="user.fotoUsuario"
+            class="form-control"
+            name="foto"
+            id="foto"
+            rows="1"
+            placeholder="Cole o link da sua foto aqui"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input
+            type="password"
+            class="form-control"
+            name="senha"
+            id="senha"
+            rows="1"
+            placeholder="Digite sua nova senha aqui" (input)='confirmSenha($event)'
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="confirmaSenha">Confirmar Senha</label>
+          <input
+            [(ngModel)]="user.senhaUsuario"
+            type="password"
+            class="form-control"
+            name="confirmaSenha"
+            id="confirmaSenha"
+            rows="1"
+            placeholder="Confirme sua nova senha aqui"
+          />
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          Cancelar
+        </button>
+        <button
+          type="button"
+          class="btn btn-success"
+          (click)="editarUsuario()"
+          data-dismiss="modal"
+        >
+          Confirmar
+        </button>
       </div>
     </div>
   </div>

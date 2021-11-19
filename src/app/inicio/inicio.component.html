@@ -1,7 +1,6 @@
 <div class="container margint-10 mt-55">
   <div class="tam row d-flex justify-content-center mr-1">
     <div class="col-md-8 p-0">
-
       <div class="postagem-container rounded">
         <div class="row d-flex justify-content-center py-3 mb-3 mx-0">
           <div class="col-md-1 mr-1">
@@ -9,14 +8,28 @@
               class="rounded-circle"
               height="45px"
               width="45px"
-              src="{{foto}}"
+              src="{{ foto }}"
               alt=""
             />
           </div>
 
           <div class="col-md-10">
             <div class="mr-3">
-              <button style="width: 100%; height: 45px;" type="button" class="btn btn-light rounded-pill border border-dark bg-white d-flex" data-toggle="modal" data-target="#novaPostagem">Digite seu texto aqui</button>
+              <button
+                style="width: 100%; height: 45px"
+                type="button"
+                class="
+                  btn btn-light
+                  rounded-pill
+                  border border-dark
+                  bg-white
+                  d-flex
+                "
+                data-toggle="modal"
+                data-target="#novaPostagem"
+              >
+                Digite seu texto aqui
+              </button>
             </div>
           </div>
 
@@ -27,11 +40,10 @@
             <div class="col-md-2">
               <button type="button" class="btn btn-light">Tema</button>
             </div>
-
           </div>
         </div>
       </div>
-      <hr>
+      <hr />
     </div>
   </div>
 </div>
@@ -48,62 +60,113 @@
               class="rounded-circle bg-info"
               height="45px"
               width="45px"
-              src="{{item.usuario.fotoUsuario}}"
+              src="{{ item.usuario.fotoUsuario }}"
               alt=""
             />
           </div>
 
           <div class="col-md-9">
             <div class="mr-2">
-              <h6 class="text-muted">{{item.usuario.nomeUsuario}} {{item.usuario.sobrenomeUsuario}}</h6>
+              <h6 class="text-muted">
+                {{ item.usuario.nomeUsuario }}
+                {{ item.usuario.sobrenomeUsuario }}
+              </h6>
             </div>
 
             <div class="mr-3">
-              <small class="text-muted">Data: {{item.dataPostagem | date: 'dd/MM/yyyy'}} às {{item.dataPostagem | date: 'HH:mm'}} </small>
+              <small class="text-muted"
+                >Data: {{ item.dataPostagem | date: "dd/MM/yyyy" }} às
+                {{ item.dataPostagem | date: "HH:mm" }}
+              </small>
             </div>
           </div>
 
           <div class="col-md-1 pl-0">
-            <a *ngIf='idUser === item.usuario.idUsuario' data-toggle="modal" data-target="#editarPostagem" href="#editarPostagem"><i class="fa fa-pencil mr-1"  aria-hidden="true" (click)="findByIdPostagem(item.idPostagem)"></i></a>
+            <a
+              *ngIf="idUser === item.usuario.idUsuario"
+              data-toggle="modal"
+              data-target="#editarPostagem"
+              href="#editarPostagem"
+              ><i
+                class="fa fa-pencil mr-1"
+                aria-hidden="true"
+                (click)="findByIdPostagem(item.idPostagem)"
+              ></i
+            ></a>
 
-            <a *ngIf='idUser === item.usuario.idUsuario' class="cursor-pointer"><i class="fa fa-trash ml-2" style="color:red; cursor: pointer;" aria-hidden="true" (click)="deletarPostagem(idPostagem)"></i></a>
+            <a *ngIf="idUser === item.usuario.idUsuario" class="cursor-pointer"
+              ><i
+                class="fa fa-trash ml-2"
+                style="color: red; cursor: pointer"
+                aria-hidden="true"
+                (click)="deletarPostagem(item.idPostagem)"
+              ></i
+            ></a>
           </div>
 
           <div class="row d-flex justify-content-center w-100 mt-3 mx-0">
             <div class="col-md-11">
-
-                <div class="row d-flex align-items-center">
-                  <div class="col-md-10">
-                    <h5 class="text-align mb-0 align-items-center">{{item.titulo}}</h5>
-                  </div>
-
-                  <div class="col-md-2 d-flex justify-content-end">
-                    <button  ngClass="item.tema.tema === 'Solar' ? btn btn-outline-warning : btn btn-outline-info" type="button" class="btn btn-outline-success">{{item.tema.tema}}</button>
-                  </div>
+              <div class="row d-flex align-items-center">
+                <div class="col-md-10">
+                  <h5 class="text-align mb-0 align-items-center">
+                    {{ item.titulo }}
+                  </h5>
                 </div>
 
+                <div class="col-md-2 d-flex justify-content-end">
+                  <button
+                    *ngIf="item.tema.tema === 'Eólica'"
+                    type="button"
+                    class="btn btn-outline-success cursor-default"
+                  >
+                    {{ item.tema.tema }}
+                  </button>
+
+                  <button
+                    *ngIf="item.tema.tema === 'Solar'"
+                    type="button"
+                    class="btn btn-outline-warning cursor-default"
+                  >
+                    {{ item.tema.tema }}
+                  </button>
+
+                  <button
+                    *ngIf="item.tema.tema === 'Hídrica'"
+                    type="button"
+                    class="btn btn-outline-primary cursor-default"
+                  >
+                    {{ item.tema.tema }}
+                  </button>
+
+                  <button
+                    *ngIf="item.tema.tema === 'Biomassa'"
+                    type="button"
+                    class="btn btn-outline-secondary cursor-default"
+                  >
+                    {{ item.tema.tema }}
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="row d-flex justify-content-center mt-2 mx-0">
             <div class="col-md-11">
-              <p class="mb-0 text-justify">{{item.descricao}}</p>
+              <p class="mb-0 text-justify">{{ item.descricao }}</p>
             </div>
 
-            <div class="row d-flex justify-content-start w-100 ml-5 ">
-              <p class="text-primary">{{item.hashtag}}</p>
+            <div class="row d-flex justify-content-start w-100 ml-5">
+              <p class="text-primary">{{ item.hashtag }}</p>
             </div>
           </div>
 
           <div class="row d-flex justify-content mt-1 mx-0">
             <div class="col-md-12">
-              <img src="{{item.imagem}}" height="400px" alt="">
+              <img src="{{ item.imagem }}" height="400px" alt="" />
             </div>
           </div>
-
         </div>
       </div>
-
     </div>
   </div>
 </div>
@@ -114,43 +177,108 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Criar publicação</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-
         <div class="form-group">
           <label for="título">Título</label>
-          <input [(ngModel)]='postagem.titulo' class="form-control" name="título" id="título"  rows="1" placeholder="Digite seu título aqui">
+          <input
+            [(ngModel)]="postagem.titulo"
+            type="text"
+            class="form-control"
+            name="título"
+            id="título"
+            rows="1"
+            placeholder="Digite seu título aqui"
+            required
+          />
+          <div class="invalid-feedback">
+            Por favor, digite um título para sua postagem.
+          </div>
         </div>
 
         <div class="form-group">
           <label for="texto">Texto</label>
-          <textarea [(ngModel)]='postagem.descricao' class="form-control" name="texto" id="texto"  rows="3" placeholder="Digite seu texto aqui"></textarea>
+          <textarea
+            [(ngModel)]="postagem.descricao"
+            type="text"
+            class="form-control"
+            value=""
+            name="texto"
+            id="texto"
+            rows="3"
+            placeholder="Digite seu texto aqui"
+            required
+          ></textarea>
+          <div class="invalid-feedback">
+            Por favor, digite um texto entre 5 e 500 caracteres.
+          </div>
         </div>
 
         <div class="form-group">
           <label for="foto">Foto</label>
-          <input [(ngModel)]='postagem.imagem' class="form-control" name="foto" id="foto"  rows="1" placeholder="Cole o link da sua foto aqui">
+          <input
+            [(ngModel)]="postagem.imagem"
+            class="form-control"
+            name="foto"
+            id="foto"
+            rows="1"
+            placeholder="Cole o link da sua foto aqui"
+          />
         </div>
 
         <div class="form-group">
           <label for="hashtag">Hashtag</label>
-          <input [(ngModel)]='postagem.hashtag' class="form-control" name="hashtag" id="hashtag"  rows="1" placeholder="Adicione suas hashtags aqui">
+          <input
+            [(ngModel)]="postagem.hashtag"
+            class="form-control"
+            name="hashtag"
+            id="hashtag"
+            rows="1"
+            placeholder="Adicione suas hashtags aqui"
+          />
         </div>
 
         <div class="form-group">
           <label for="tema">Tema</label>
-          <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)="getAllTemas()">
-            <option *ngFor="let item of listaTemas  | orderBy : key : reverse" value="{{item.idTema}}">{{item.tema}}</option>
+          <select
+            class="form-control"
+            name="tema"
+            id="tema"
+            [(ngModel)]="idTema"
+            (change)="getAllTemas()"
+          >
+            <option
+              *ngFor="let item of listaTemas | orderBy: key:reverse"
+              value="{{ item.idTema }}"
+            >
+              {{ item.tema }}
+            </option>
           </select>
+          <div class="invalid-feedback">
+            Por favor, selecione um tema.
+          </div>
         </div>
-
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" (click)="publicarPostagem()" data-dismiss="modal">Publicar</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          Cancelar
+        </button>
+        <button
+          type="button"
+          class="btn btn-success"
+          (click)="publicarPostagem()"
+          data-dismiss="modal"
+        >
+          Publicar
+        </button>
       </div>
     </div>
   </div>
@@ -162,43 +290,94 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Editar publicação</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-
         <div class="form-group">
           <label for="título">Título</label>
-          <input [(ngModel)]='postagem.titulo' class="form-control" name="título" id="título"  rows="1" placeholder="Digite seu título aqui">
+          <input
+            [(ngModel)]="postagem.titulo"
+            class="form-control"
+            name="título"
+            id="título"
+            rows="1"
+            placeholder="Digite seu título aqui"
+          />
         </div>
 
         <div class="form-group">
           <label for="texto">Texto</label>
-          <textarea [(ngModel)]='postagem.descricao' class="form-control" name="texto" id="texto"  rows="3" placeholder="Digite seu texto aqui"></textarea>
+          <textarea
+            [(ngModel)]="postagem.descricao"
+            class="form-control"
+            name="texto"
+            id="texto"
+            rows="3"
+            placeholder="Digite seu texto aqui"
+          ></textarea>
         </div>
 
         <div class="form-group">
           <label for="foto">Foto</label>
-          <input [(ngModel)]='postagem.imagem' class="form-control" name="foto" id="foto"  rows="1" placeholder="Cole o link da sua foto aqui">
+          <input
+            [(ngModel)]="postagem.imagem"
+            class="form-control"
+            name="foto"
+            id="foto"
+            rows="1"
+            placeholder="Cole o link da sua foto aqui"
+          />
         </div>
 
         <div class="form-group">
           <label for="hashtag">Hashtag</label>
-          <input [(ngModel)]='postagem.hashtag' class="form-control" name="hashtag" id="hashtag"  rows="1" placeholder="Adicione suas hashtags aqui">
+          <input
+            [(ngModel)]="postagem.hashtag"
+            class="form-control"
+            name="hashtag"
+            id="hashtag"
+            rows="1"
+            placeholder="Adicione suas hashtags aqui"
+          />
         </div>
 
         <div class="form-group">
-
           <label for="tema">Tema</label>
-          <select class="form-control" name="tema" id="tema" [(ngModel)]='idTema' (change)="getAllTemas()">
-            <option *ngFor="let item of listaTemas  | orderBy : key : reverse" value="{{item.idTema}}">{{item.tema}}</option>
+          <select
+            class="form-control"
+            name="tema"
+            id="tema"
+            [(ngModel)]="idTema"
+            (change)="getAllTemas()"
+          >
+            <option
+              *ngFor="let item of listaTemas | orderBy: key:reverse"
+              value="{{ item.idTema }}"
+            >
+              {{ item.tema }}
+            </option>
           </select>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" (click)="editarPostagem()" data-dismiss="modal">Publicar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Cancelar
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="editarPostagem()"
+          data-dismiss="modal"
+        >
+          Publicar
+        </button>
       </div>
     </div>
   </div>

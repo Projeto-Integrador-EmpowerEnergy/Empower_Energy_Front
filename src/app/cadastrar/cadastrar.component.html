@@ -1,7 +1,6 @@
-<div class="container-fluid" style="background-color: #eaebed ; height:100vh; ">
-  <div class="row">
-
-    <div class="tm container col-md-6 d-flex flex-column">
+<div class="container-fluid" style="background-color: #eaebed; height: 100vh">
+  <div class="row h-100">
+    <div class="tm container col-md-6 d-flex flex-column justify-content-center h-100 mb-0">
       <img
         class="imagemLogo"
         src="/assets/img/logo2.png"
@@ -16,131 +15,150 @@
     </div>
 
     <div class="col-md-6 mt-10">
-      <div class="row d-flex justify-content-center">
+      <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-md-10">
-        
           <h3 class="text-center mb-0 mt-3" id="cad">Cadastre-se</h3>
-          <!-- <h4 class="text-center" >Bem-vindes</h4> -->
 
-          <div class="form-group">
-            <label for="nome">Nome</label>
-            <input
-              [(ngModel)]="user.nomeUsuario"
-              class="form-control"
-              type="text"
-              name="nome"
-              id="nome"
-              placeholder="Como gostaria de ser chamade?"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="sobreNome">Sobrenome</label>
-            <input
-              [(ngModel)]="user.sobrenomeUsuario"
-              class="form-control"
-              type="text"
-              name="sobreNome"
-              id="sobreNome"
-              placeholder="Insira seu Sobrenome"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input
-              [(ngModel)]="user.emailUsuario"
-              class="form-control"
-              type="text"
-              name="email"
-              id="email"
-              placeholder="Insira seu Email"
-            />
-          </div>
-
-          <div class="d-flex justify-content-between w-100">
-            <div class="form-group pr-1 w-50">
-              <label for="idade">Idade</label>
+          <form action="" class="needs-validation" novalidate>
+            <div class="form-group">
+              <label for="nome">Nome</label>
               <input
-                [(ngModel)]="user.idadeUsuario"
+                [(ngModel)]="user.nomeUsuario"
                 class="form-control"
-                type="number"
-                name="idade"
-                id="idade"
-                placeholder="Insira a sua Idade"
+                type="text"
+                name="nome"
+                id="nome"
+                placeholder="Como gostaria de ser chamade?"
+                required
+              />
+              <div class="invalid-feedback">
+                O nome precisa ter no mínimo 5 letras.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="sobreNome">Sobrenome</label>
+              <input
+                [(ngModel)]="user.sobrenomeUsuario"
+                class="form-control"
+                type="text"
+                name="sobreNome"
+                id="sobreNome"
+                placeholder="Insira seu Sobrenome"
+                required
+              />
+              <div class="invalid-feedback">
+                O sobrenome precisa ter no mínimo 5 letras.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                [(ngModel)]="user.emailUsuario"
+                class="form-control"
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Insira seu Email"
+                required
               />
             </div>
 
-            <div class="form-group w-50">
-              <label for="tipo">Tipo de Usuario:</label>
-              <select class="form-control" name="tipo" id="tipo">
-                <option>Selecione um tipo de usuario:</option>
-                <option value="normal">Normal</option>
-                <option value="adm">Administrador</option>
-              </select>
+            <div class="d-flex justify-content-between w-100">
+              <div class="form-group pr-1 w-50">
+                <label for="idade">Idade</label>
+                <input
+                  [(ngModel)]="user.idadeUsuario"
+                  class="form-control"
+                  type="number"
+                  name="idade"
+                  id="idade"
+                  placeholder="Insira a sua Idade"
+                />
+              </div>
+
+              <div class="form-group w-50">
+                <label for="tipo">Tipo de Usuario:</label>
+                <select
+                  class="form-control"
+                  name="tipo"
+                  id="tipo"
+                  (change)="tipoUser($event)"
+                >
+                  <option selected disabled value="">
+                    Selecione um tipo de usuario:
+                  </option>
+                  <option value="normal">Normal</option>
+                  <option value="adm">Administrador</option>
+                </select>
+              </div>
             </div>
 
-          </div>
-          
-
-          <div class="form-group">
-            <label for="foto">Link da Foto</label>
-            <input
-              [(ngModel)]="user.fotoUsuario"
-              class="form-control"
-              type="text"
-              name="foto"
-              id="foto"
-              placeholder="Link da sua Foto"
-            />
-          </div>
-
-          <div class="d-flex justify-content-between w-100">
-            <div class="form-group w-50 pr-1 mb-0">
-              <label for="senha">Senha</label>
+            <div class="form-group">
+              <label for="foto">Link da Foto</label>
               <input
-                (input)="confirmSenha($event)"
+                [(ngModel)]="user.fotoUsuario"
                 class="form-control"
-                type="password"
-                name="senha"
-                id="senha"
-                placeholder="Insira a sua Senha"
+                type="text"
+                name="foto"
+                id="foto"
+                placeholder="Link da sua Foto"
               />
             </div>
 
-            <div class="form-group w-50 mb-0">
-              <label for="confirmSenha">Confirme sua Senha</label>
-              <input
-                [(ngModel)]="user.senhaUsuario"
-                class="form-control"
-                type="password"
-                name="confirmSenha"
-                id="confirmSenha"
-                placeholder="Insira a sua Senha"
-              />
+            <div class="d-flex justify-content-between w-100">
+              <div class="form-group w-50 pr-1 mb-0">
+                <label for="senha">Senha</label>
+                <input
+                  (input)="confirmSenha($event)"
+                  class="form-control"
+                  type="password"
+                  name="senha"
+                  id="senha"
+                  placeholder="Insira a sua Senha"
+                  required
+                />
+                <div class="invalid-feedback">
+                  A senha precisa ter no mínimo 5 caracteres.
+                </div>
+              </div>
+
+              <div class="form-group w-50 mb-0">
+                <label for="confirmSenha">Confirme sua Senha</label>
+                <input
+                  [(ngModel)]="user.senhaUsuario"
+                  class="form-control"
+                  type="password"
+                  name="confirmSenha"
+                  id="confirmSenha"
+                  placeholder="Confirme a sua Senha"
+                />
+                <div class="invalid-feedback">
+                  A senha precisa ter no mínimo 5 caracteres.
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="form-group">
-           
-          </div>
+            <div class="form-group"></div>
 
-          <div class="d-flex justify-content-center">
-            <button
-              type="submit"
-              class="btn btn-danger mr-4"
-              routerLink="/entrar"
-            >
-              Cancelar
-            </button>
-            <button
-              type="submit"
-              class="btn btn-success mr-4"
-              (click)="cadastrar()"
-            >
-              Cadastrar
-            </button>
-          </div>
+            <div class="d-flex justify-content-center">
+              <button
+                type="submit"
+                class="btn btn-danger mr-4"
+                routerLink="/entrar"
+              >
+                Cancelar
+              </button>
+              <button
+                type="submit"
+                class="btn btn-success mr-4"
+                (click)="cadastrar()"
+              >
+                Cadastrar
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
