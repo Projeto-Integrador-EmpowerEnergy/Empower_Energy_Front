@@ -1,12 +1,13 @@
 <div
   class="container-fluid fixed-top mb-5 marginleft"
-  style="background-color: #EAEBED"
+  style="background-color: #eaebed"
 >
   <!-- criação da navBar -->
-
-  <nav class="navbar navbar-expand d-flex justify-content-between" style="width: 85%;" >
+  <nav
+    class="navbar navbar-expand d-flex justify-content-between"
+    style="width: 85%"
+  >
     <form style="width: 400px" class="my-1 my-lg-0">
-
       <input
         class="border-secondary rounded"
         type="search"
@@ -30,12 +31,26 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="d-flex justify-content-end">
+    <!-- botões da navbar -->
+    <div class="d-flex justify-content-end align-items-center">
+      <div  class="dropdown mr-5"><!-- *ngIf='authService.admin()' -->
+        <button
+          class="btn btn-success"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="modal"
+          data-target="#editarTema"
+          aria-expanded="false"
+          (click)="findAllTemas()"
+        >
+          Tema <i class="fa fa-plus-circle" aria-hidden="true"></i>
+        </button>
+      </div>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-
           <div class="">
-            <li class=" sidebar-navigation nav-item active">
+            <li class="sidebar-navigation nav-item active">
               <a class="nav-link text-dark" href="" routerLink="/inicio">
                 <div class="d-flex justify-content-center">
                   <i class="fa fa-home fa-lg fs-1" aria-hidden="true"> </i>
@@ -56,9 +71,8 @@
             </li>
           </div>
 
-          <!-- botões da navbar -->
           <div class="hoverIcone">
-            <li class="nav-item ">
+            <li class="nav-item">
               <a class="nav-link text-dark" href="#">
                 <div class="d-flex justify-content-center">
                   <i
@@ -74,7 +88,7 @@
 
           <div class="hoverIcone">
             <li class="nav-item">
-              <a class="nav-link text-dark" href="#" [routerLink]="['/perfil']">
+              <a class="nav-link text-dark" href="#" [routerLink]="['/perfil', id]">
                 <div class="d-flex justify-content-center">
                   <i class="text-center fa fa-user fa-lg" aria-hidden="true">
                   </i>
@@ -94,9 +108,86 @@
               </a>
             </li>
           </div>
-          <!-- botões da navbar -->
         </ul>
       </div>
     </div>
   </nav>
+</div>
+
+<!-- Modal Criação/Edição Tema -->
+<div class="modal" id="editarTema" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Criar/Editar Tema</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="tema">Criar Tema</label>
+          <input
+            [(ngModel)]='tema.tema'
+            type="text"
+            class="form-control"
+            name="tema"
+            id="tema"
+            rows="1"
+            placeholder="Digite o novo tema aqui"
+            required
+          />
+          <div class="invalid-feedback">
+            Por favor, digite um tema para sua postagem.
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn btn-success" (click)="cadastrarTema()">Adicionar</button>
+        </div>
+
+        <hr />
+
+        <label for="tema">Editar Tema</label>
+        <div class="container d-flex justify-content-center">
+          <div class="row mt-1 mb-1 d-flex justify-content-center w-100">
+            <div class="col-md-12 px-0 w-100 d-flex justify-content-center">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#Id</th>
+                    <th scope="col">Tema</th>
+                    <th scope="col">Modificações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of listaTemas">
+                      <th>{{item.idTema}}</th>
+                      <td>{{item.tema}}</td>
+                      <td class="d-flex justify-content-end">
+                        <button class="btn btn-info mr-3" (click)="atualizarTema()">Editar</button>
+                        <button class="btn btn-danger" (click)="apagarTema(tema.idTema)">Apagar</button>
+                      </td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          Cancelar
+        </button>
+        <button type="button" class="btn btn-success" data-dismiss="modal">
+          Publicar
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

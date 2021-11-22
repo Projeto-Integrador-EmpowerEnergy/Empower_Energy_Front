@@ -81,6 +81,7 @@
             </div>
           </div>
 
+          <!-- Edição e deleção apenas se o usuário for dono da postagem -->
           <div class="col-md-1 pl-0">
             <a
               *ngIf="idUser === item.usuario.idUsuario"
@@ -118,7 +119,7 @@
                   <button
                     *ngIf="item.tema.tema === 'Eólica'"
                     type="button"
-                    class="btn btn-outline-success cursor-default"
+                    class="btn btn-success" disabled
                   >
                     {{ item.tema.tema }}
                   </button>
@@ -126,7 +127,7 @@
                   <button
                     *ngIf="item.tema.tema === 'Solar'"
                     type="button"
-                    class="btn btn-outline-warning cursor-default"
+                    class="btn btn-warning" disabled
                   >
                     {{ item.tema.tema }}
                   </button>
@@ -134,7 +135,7 @@
                   <button
                     *ngIf="item.tema.tema === 'Hídrica'"
                     type="button"
-                    class="btn btn-outline-primary cursor-default"
+                    class="btn btn-primary" disabled
                   >
                     {{ item.tema.tema }}
                   </button>
@@ -142,7 +143,7 @@
                   <button
                     *ngIf="item.tema.tema === 'Biomassa'"
                     type="button"
-                    class="btn btn-outline-secondary cursor-default"
+                    class="btn btn-outline-secondary" disabled
                   >
                     {{ item.tema.tema }}
                   </button>

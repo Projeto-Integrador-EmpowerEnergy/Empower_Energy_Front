@@ -36,4 +36,12 @@ export class TemaService {
     return this.http.get<Tema>(`https://empowerenergyprojeto.herokuapp.com/api/v1/tema/${id}`, this.token)
   }
 
+  putTema(tema: Tema): Observable<Tema>{
+    return this.http.put<Tema>('https://empowerenergyprojeto.herokuapp.com/api/v1/tema/atualizar', tema, this.token)
+  }
+
+  deleteTema(id: number){
+    return this.http.delete(`https://empowerenergyprojeto.herokuapp.com/api/v1/tema/deletar/${id}`, this.token)
+  }
+
 }
