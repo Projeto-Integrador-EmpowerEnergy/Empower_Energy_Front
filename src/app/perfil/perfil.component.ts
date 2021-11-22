@@ -4,6 +4,8 @@ import { environment } from 'src/environments/environment.prod';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../service/auth.service';
 import { User } from '../model/User';
+import { PostagemService } from '../service/postagem.service';
+import { Postagem } from '../model/Postagem';
 
 @Component({
   selector: 'app-perfil',
@@ -15,7 +17,7 @@ export class PerfilComponent implements OnInit {
   nome = environment.nome
   sobrenome = environment.sobrenome
   foto = environment.foto
-  idUser = environment.id
+  idUser: number
   id = environment.id
   /* idUser: number */
 
@@ -23,10 +25,17 @@ export class PerfilComponent implements OnInit {
   listaUsuarios: User[]
   confirmarSenha: string
 
+  listaPostagens: Postagem[]
+  postagem: Postagem = new Postagem()
+
+  key = 'data'
+  reverse = true
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private authService: AuthService
+    private authService: AuthService,
+    private postagemService: PostagemService
     ) { }
 
   ngOnInit() {
@@ -38,10 +47,11 @@ export class PerfilComponent implements OnInit {
       this.router.navigate(['entrar'])
     }
 
-    /* this.idUser = this.route.snapshot.params['id'] */
-    this.findByIdUser(this.idUser)
-
     this.authService.refreshToken()
+    this.idUser = this.route.snapshot.params['id']
+    this.findByIdUser()
+
+
 
     console.log(this.sobrenome)
     console.log(this.nome)
@@ -72,11 +82,32 @@ export class PerfilComponent implements OnInit {
     }
   }
 
-  findByIdUser(id: number){
-    console.log(this.id)
-    this.authService.getByIdUser(id).subscribe((resp: User) => {
+  findByIdUser(){
+    console.log(this.idUser)
+    this.authService.getByIdUser(this.id).subscribe((resp: User) => {
       this.user = resp
+      console.log(this.user)
     })
   }
 
+  findByIdPostagem(idPostagem: number){
+    alert('Deseja editar essa postagem?')
+    this.postagemService.getByIdPostagem(idPostagem).subscribe((resp: Postagem) => {
+      this.postagem = resp
+    })
+  }
+
+  deletarPostagem(id: number){
+    alert('Tem certeza que você quer excluir esta postagem?')
+    this.postagemService.deletePostagem(id).subscribe(() => {
+      alert('Postagem excluída com sucesso!')
+      this.getAllPostagens()
+    })
+  }
+
+  getAllPostagens(){
+    this.postagemService.geAllPostagens().subscribe((resp: Postagem[]) => {
+      this.listaPostagens = resp
+    })
+  }
 }

@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'cadastrar', component: CadastrarComponent},
   {path: 'inicio', component: InicioComponent},
   {path: 'landing', component: LandingComponent},
-  {path: 'perfil', component: PerfilComponent},
+  {path: 'perfil/:id', component: PerfilComponent},
   {path: 'sobre', component: SobreNosComponent}
 ];
 

@@ -33,6 +33,7 @@ export class InicioComponent implements OnInit {
   listaUsuarios: User[]
   idUser = environment.id
   nomeUsuario = environment.nome
+  tipoUser = environment.tipoUser
   userLogin: UserLogin = new UserLogin
 
   key = 'data'
@@ -61,6 +62,8 @@ export class InicioComponent implements OnInit {
 
     this.getAllPostagens()
     this.getAllTemas()
+
+    console.log(this.user)
 
 }
 
