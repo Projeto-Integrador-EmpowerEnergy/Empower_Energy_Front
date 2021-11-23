@@ -5,22 +5,27 @@
         <div class="card-img-bottom">
           <div class="card-body">
             <div class="card-info">
-              <div class="card-address container-fluid">
+              <div class="row d-flex card-address container-fluid">
                 <img
                   class="card-img-bottom"
                   src="assets\img\exemplo capa.jfif"
                   alt="Imagem de capa do card"
                 />
-                <div class="col-md-6">
-                  <!-- *ngFor="let item of listaUsuarios" -->
+                <div class="col-md-9">
                   <img src="{{ foto }}" alt="..." class="img-thumbnail tm" />
                   <div class="container">
-                    <h1>{{ user.nomeUsuario }} {{ user.sobrenomeUsuario }}</h1>
                     <h3>
-                      {{user.profissaoUsuario}}
+                      <strong>
+                        {{ user.nomeUsuario }} {{ user.sobrenomeUsuario }}
+                      </strong>
                     </h3>
+                    <p class="text-justify">
+                      {{ user.profissaoUsuario }}
+                    </p>
                   </div>
+                </div>
 
+                <div class="col-md-3">
                   <div class="container-fluid tm-2">
                     <a
                       class="
@@ -42,17 +47,15 @@
                     </a>
                   </div>
                 </div>
+
               </div>
             </div>
 
             <!-- Postagens do Usuário -->
             <h1>Teste</h1>
-            <div class="container my-2">
+            <div class="container my-2" *ngFor="let item of user.minhasPostagens | orderBy: key:reverse">
               <div class="row d-flex justify-content-center mr-1">
-                <div
-                  class="col-md-8 p-0"
-                  *ngFor="let item of user.postagem | orderBy: key:reverse"
-                >
+                <div class="col-md-8 p-0">
                   <div class="postagem-container rounded p-0">
                     <div
                       class="row d-flex justify-content-center pt-3 mb-3 mx-0"
