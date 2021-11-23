@@ -33,12 +33,29 @@
             </div>
           </div>
 
-          <div class="row d-flex justify-content-around mt-3">
-            <div class="col-md-2 mr-3">
-              <button type="button" class="btn btn-light">Foto</button>
+          <div class="row d-flex justify-content-around mt-4 w-100">
+            <div class="col-md-3 d-flex justify-content-center">
+              <button class="btn btn-outline">
+                <i class="fa fa-picture-o" aria-hidden="true"></i> Foto
+              </button>
             </div>
-            <div class="col-md-2">
-              <button type="button" class="btn btn-light">Tema</button>
+
+            <div class="col-md-3 d-flex justify-content-center">
+              <button class="btn btn-outline">
+                <i class="fa fa-play" aria-hidden="true"></i> Vídeo
+              </button>
+            </div>
+
+            <div class="col-md-3 d-flex justify-content-center">
+              <button class="btn btn-outline">
+                <i class="fa fa-calendar-plus-o" aria-hidden="true"></i> Evento
+              </button>
+            </div>
+
+            <div class="col-md-3 d-flex justify-content-center">
+              <button class="btn btn-outline">
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Artigo
+              </button>
             </div>
           </div>
         </div>
@@ -51,10 +68,12 @@
 <!-- Cards -->
 <div class="container my-2">
   <div class="row d-flex justify-content-center mr-1">
-    <div class="col-md-8 p-0" *ngFor="let item of listaPostagens | orderBy : key : reverse">
-
+    <div
+      class="col-md-8 p-0"
+      *ngFor="let item of listaPostagens | orderBy: key:reverse"
+    >
       <div class="postagem-container rounded p-0">
-        <div class="row d-flex justify-content-center pt-3 mb-3 mx-0">
+        <div class="row d-flex justify-content-center pt-3 mx-0">
           <div class="col-md-1 mr-1">
             <img
               class="rounded-circle bg-info"
@@ -105,7 +124,6 @@
             ></a>
           </div>
 
-
           <div class="row d-flex justify-content-center w-100 mt-3 mx-0">
             <div class="col-md-11">
               <div class="row d-flex align-items-center">
@@ -119,7 +137,8 @@
                   <button
                     *ngIf="item.tema.tema === 'Eólica'"
                     type="button"
-                    class="btn btn-success" disabled
+                    class="btn btn-success"
+                    disabled
                   >
                     {{ item.tema.tema }}
                   </button>
@@ -127,7 +146,8 @@
                   <button
                     *ngIf="item.tema.tema === 'Solar'"
                     type="button"
-                    class="btn btn-warning" disabled
+                    class="btn btn-warning"
+                    disabled
                   >
                     {{ item.tema.tema }}
                   </button>
@@ -135,7 +155,8 @@
                   <button
                     *ngIf="item.tema.tema === 'Hídrica'"
                     type="button"
-                    class="btn btn-primary" disabled
+                    class="btn btn-primary"
+                    disabled
                   >
                     {{ item.tema.tema }}
                   </button>
@@ -143,7 +164,8 @@
                   <button
                     *ngIf="item.tema.tema === 'Biomassa'"
                     type="button"
-                    class="btn btn-outline-secondary" disabled
+                    class="btn btn-outline-secondary"
+                    disabled
                   >
                     {{ item.tema.tema }}
                   </button>
@@ -162,10 +184,44 @@
             </div>
           </div>
 
-          <div class="row d-flex justify-content mt-1 mx-0 mb-4">
+          <div class="row d-flex justify-content mt-1 mx-0 mb-1">
             <div class="col-md-12">
-              <img src="{{ item.imagem }}" height="400px" width="580px" alt="" />
+              <img
+                src="{{ item.imagem }}"
+                height="400px"
+                width="580px"
+                alt=""
+              />
             </div>
+          </div>
+        </div>
+
+        <hr class="mb-0">
+
+        <!-- Botões de reação -->
+        <div class="row d-flex justify-content-center mb-4">
+          <div class="col-md-3 d-flex justify-content-center">
+            <button class="btn btn-outline">
+              <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Gostei
+            </button>
+          </div>
+
+          <div class="col-md-3 d-flex justify-content-center">
+            <button class="btn btn-outline">
+              <i class="fa fa-comment-o" aria-hidden="true"></i> Comentar
+            </button>
+          </div>
+
+          <div class="col-md-3 d-flex justify-content-center">
+            <button class="btn btn-outline">
+              <i class="fa fa-share" aria-hidden="true"></i> Compartilhar
+            </button>
+          </div>
+
+          <div class="col-md-3 d-flex justify-content-center">
+            <button class="btn btn-outline">
+              <i class="fa fa-paper-plane" aria-hidden="true"></i> Enviar
+            </button>
           </div>
         </div>
       </div>
@@ -264,9 +320,7 @@
               {{ item.tema }}
             </option>
           </select>
-          <div class="invalid-feedback">
-            Por favor, selecione um tema.
-          </div>
+          <div class="invalid-feedback">Por favor, selecione um tema.</div>
         </div>
       </div>
       <div class="modal-footer">
@@ -384,5 +438,3 @@
     </div>
   </div>
 </div>
-
-

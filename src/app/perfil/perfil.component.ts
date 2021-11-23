@@ -48,13 +48,11 @@ export class PerfilComponent implements OnInit {
     }
 
     this.authService.refreshToken()
+    this.postagemService.refreshToken()
     this.idUser = this.route.snapshot.params['id']
     this.findByIdUser()
 
-
-
-    console.log(this.sobrenome)
-    console.log(this.nome)
+    this.getAllPostagens()
   }
 
   confirmSenha(event: any) {
@@ -83,10 +81,8 @@ export class PerfilComponent implements OnInit {
   }
 
   findByIdUser(){
-    console.log(this.idUser)
     this.authService.getByIdUser(this.id).subscribe((resp: User) => {
       this.user = resp
-      console.log(this.user)
     })
   }
 

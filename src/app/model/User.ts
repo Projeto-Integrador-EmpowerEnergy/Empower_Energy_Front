@@ -1,4 +1,4 @@
-//import { Postagem } from "./Postagem"
+import { Postagem } from "./Postagem"
 
 export class User{
   public idUsuario: number
@@ -9,5 +9,5 @@ export class User{
   public fotoUsuario: string
   public tipoUsuario: string
   public idadeUsuario: number
-  //public postagem: Postagem[]
+  public postagem: Postagem[]
 }
