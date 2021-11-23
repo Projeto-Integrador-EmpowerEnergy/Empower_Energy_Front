@@ -1,62 +1,79 @@
 <div class="container perfil">
-  <div class="row d-flex ">
+  <div class="row d-flex">
     <div class="col-md-9 p-0 d-flex justify-content-center">
       <div class="container p-0">
         <div class="card-img-bottom">
           <div class="card-body p-0">
             <div class="card-info">
-              <div class="row d-flex card-address container-fluid  pr-0">
+              <div class="row d-flex card-address container-fluid pr-0">
                 <img
                   class="card-img-bottom rounded"
                   src="assets\img\exemplo capa.jfif"
                   alt="Imagem de capa do card"
                 />
 
-                <div class="row d-flex justify-content-evenly">
-                  <div class="col-md-9 ml-3">
-                  <img src="{{ foto }}" alt="..." class="img-thumbnail tm1 ml-3" />
-                  <div class="container ml-2">
-                    <h3>
-                      <strong>
-                        {{ user.nomeUsuario }} {{ user.sobrenomeUsuario }}
-                      </strong>
-                    </h3>
-                    <p class="text-justify">
-                      {{ user.profissaoUsuario }}
-                    </p>
-                  </div>
-                </div>
+                <div class="row d-flex justify-content-evenly w-100 mx-0">
+                  <div class="col-md-9 ml-1 w-100">
+                    <img
+                      src="{{ foto }}"
+                      alt="..."
+                      class="img-thumbnail tm1 ml-4"
+                    />
+                    <div class="container">
+                      <div class="col-md-12 mt-3">
+                        <h3>
+                          <strong>
+                            {{ user.nomeUsuario }} {{ user.sobrenomeUsuario }}
+                          </strong>
+                        </h3>
+                        <p class="text-justify">
+                          {{ user.profissaoUsuario }}
+                        </p>
+                      </div>
+                    </div>
 
-                <div class="col-md-2 mr-0">
-                  <div class="container-fluid tm-2 pr-0">
-                    <a
-                      class="
-                        nav-link
-                        dropdown-toggle
-                        text-white
-                        btn btn-outline-success
-                      "
-                      href="#"
-                      id="navbarDropdown"
-                      role="button"
-                      data-toggle="modal"
-                      data-target="#editarUsuario"
-                      aria-expanded="false"
-                      type="button"
-                      style="background-color: #57ae09"
-                    >
-                      Editar Perfil
-                    </a>
+
+
                   </div>
-                </div>
-                </div>
+
+                      <div class="col-md-2 mr-0 w-100" style="margin-right: 0px">
+                        <div class="container tm-2 pr-0">
+                          <a
+                            class="
+                              nav-link
+                              dropdown-toggle
+                              text-white
+                              btn btn-outline-success
+                            "
+                            href="#"
+                            id="navbarDropdown"
+                            role="button"
+                            data-toggle="modal"
+                            data-target="#editarUsuario"
+                            aria-expanded="false"
+                            type="button"
+                            style="background-color: #57ae09"
+                          >
+                            Editar Perfil
+                          </a>
+                        </div>
+                      </div>
+
+
+                    </div>
+
+
+
 
               </div>
             </div>
 
             <!-- Postagens do Usuário -->
             <h1>Teste</h1>
-            <div class="container my-2" *ngFor="let item of user.minhasPostagens | orderBy: key:reverse">
+            <div
+              class="container my-2"
+              *ngFor="let item of user.minhasPostagens | orderBy: key:reverse"
+            >
               <div class="row d-flex justify-content-center mr-1">
                 <div class="col-md-8 p-0">
                   <div class="postagem-container rounded p-0">
