@@ -1,5 +1,5 @@
 .btn{
-  background-color:#3a9fff;
+  background-color:#57ae09;
   border-radius: 20px;
   padding: 10px 25px;
   color: #fff;
@@ -13,7 +13,7 @@
 
 .btn:hover{
   box-shadow: 0px 25px 18px -6px rgba(0, 0, 0,0.2);
-  background-color: #63b2fc;
+  background-color: #57ae09;
   color: #fff;
   }
 
@@ -23,16 +23,16 @@
 
   .btn--revert{
       background-color:transparent;
-      color: #8198ae;
+      color: #57ae09;
       box-shadow: none;
       border:1px solid #c9d9e9;
   }
 
   .btn--revert:hover{
       background-color:transparent;
-      color: #1f4568;
+      color: #57ae09;
       box-shadow: none;
-      border:1px solid #8198ae;
+      border:1px solid #57ae09;
   }
 
 
@@ -52,10 +52,10 @@
   }
 
   .btn--blue {
-      background-color: #3a9fff;
+      background-color: #57ae09;
   }
   .btn--blue:hover {
-      background-color: #63b2fc;
+      background-color: #57ae09;
   }
   .btn--width{
     width: 120px;
@@ -64,11 +64,11 @@
   .btn--white{
     background-color: #fff;
     border: 1px solid #ededed;
-    color: #8198ae;
+    color: #57ae09;
   }
 
   .btn--white:hover{
-    background-color: #3a9fff;
+    background-color: #57ae09;
     color: white;
   }
 
@@ -131,9 +131,9 @@ padding: 0.25rem;
 
 .btn--revert:hover{
   background-color:transparent;
-  color: #1f4568;
+  color: #57ae09;
   box-shadow: none;
-  border:1px solid #8198ae;
+  border:1px solid #57ae09;
 }
 
 
@@ -156,7 +156,7 @@ padding: 0.25rem;
   background-color: #3a9fff;
 }
 .btn--blue:hover {
-  background-color: #63b2fc;
+  background-color: #57ae09;
 }
 .btn--width{
 width: 120px;
@@ -169,7 +169,7 @@ color: #8198ae;
 }
 
 .btn--white:hover{
-background-color: #3a9fff;
+background-color: #57ae09;
 color: white;
 }
 
@@ -229,7 +229,7 @@ color: white;
 }
 .header__link:hover{
   text-decoration: none;
-  color:#3a9fff;
+  color:#57ae09;
 }
 
 .esp-btn{
