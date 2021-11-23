@@ -226,7 +226,7 @@ body {
 }
 
 .btn {
-  background-color: #3a9fff;
+  background-color: #57ae09;
   border-radius: 20px;
   padding: 10px 25px;
   color: #fff;
@@ -240,7 +240,7 @@ body {
 
 .btn:hover {
   box-shadow: 0px 25px 18px -6px rgba(0, 0, 0, 0.2);
-  background-color: #63b2fc;
+  background-color: #57ae09;
   color: #fff;
 }
 
@@ -250,14 +250,14 @@ body {
 
 .btn--revert {
   background-color: transparent;
-  color: #8198ae;
+  color: #57ae09;
   box-shadow: none;
   border: 1px solid #c9d9e9;
 }
 
 .btn--revert:hover {
   background-color: transparent;
-  color: #1f4568;
+  color: #57ae09;
   box-shadow: none;
   border: 1px solid #8198ae;
 }
@@ -294,7 +294,7 @@ body {
 }
 
 .btn--white:hover {
-  background-color: #3a9fff;
+  background-color: #57ae09;
   color: white;
 }
 
@@ -536,7 +536,7 @@ body {
 }
 .header__link:hover {
   text-decoration: none;
-  color: #3a9fff;
+  color: #57ae09;
 }
 .navbar-toggle .icon-bar {
   background-color: #8198ae;
@@ -1006,4 +1006,10 @@ body {
   .btn-espaço {
     margin-right: 10px;
   }
+  .logo-class{
+    width: 15vw;
+    margin: -6px;
+    margin-left: -83px
+    }
+
 }

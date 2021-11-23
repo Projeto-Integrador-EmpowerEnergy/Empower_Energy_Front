@@ -9,5 +9,6 @@ export class User{
   public fotoUsuario: string
   public tipoUsuario: string
   public idadeUsuario: number
+  public profissaoUsuario: string
   //public postagem: Postagem[]
 }
