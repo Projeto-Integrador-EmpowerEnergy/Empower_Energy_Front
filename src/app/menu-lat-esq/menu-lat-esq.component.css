@@ -3,6 +3,7 @@
     width: 220px;
     height: 100%;
     left: 0;
+    top: 0;
     overflow-x: hidden;
     overflow-y: auto;
     background: #EAEBED;
@@ -149,3 +150,235 @@
   scrollbar-color: #E3E3E3 #1D1C1A !important;
   scrollbar-width: thin !important;
 } */
+
+
+/* Linkedin e Github */
+#app_cover
+{
+    position: absolute;
+    /* top: 50px; */
+    right: 0;
+    left: 0;
+    width: 215px;
+   /*  margin: 0 auto; */
+}
+
+#app_cover:after
+{
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.block
+{
+    float: left;
+    width: 100px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+}
+
+.block:nth-child(2)
+{
+    /* margin: 0 10px; */
+}
+
+.card
+{
+    width: 90px;
+    padding-bottom: 30px;
+    background-size: cover;
+    box-shadow: 0 10px 20px -5px #b6b6b6;
+}
+
+.c_c_card
+{
+    position: absolute;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.4s ease-in-out width;
+}
+
+.block:hover .c_c_card
+{
+    width: 100%;
+}
+
+#c_fb
+{
+    background-color: #0a66c2;
+}
+
+#c_fb, #c_o_fb
+{
+    background-image: url("https://archive.org/download/thehimalayasingh_gmail_Mark_201905/mark.png");
+}
+
+.cc_card
+{
+    background-color: #fff;
+}
+
+#c_tw
+{
+    background-color: #24292f;
+}
+
+#c_tw, #c_o_tw
+{
+    background-image: url("https://archive.org/download/thehimalayasingh_gmail_Mark_201905/jack.png");
+}
+
+#c_gl
+{
+    background-color: #d93025;
+}
+
+#c_gl, #c_o_gl
+{
+    background-image: url("https://archive.org/download/larry_201905/larry.png");
+}
+
+.c_brand_logo
+{
+    color: #fff;
+    font-size: 34px;
+    padding: 30px 30px 0 30px;
+}
+
+#c_o_fb .c_brand_logo
+{
+    color: #4267b2;
+}
+
+#c_o_tw .c_brand_logo
+{
+    /* color: #1da1f2; */
+}
+
+#c_o_gl .c_brand_logo
+{
+    color: #d93025;
+}
+
+.c_brand_logo i
+{
+    width: 34px;
+    height: 34px;
+    display: block;
+    text-align: center;
+    padding: 13px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+#c_fb .c_brand_logo i
+{
+    background-color: rgba(66, 103, 178, 0.79);
+}
+
+#c_tw .c_brand_logo i
+{
+    /* background-color: rgba(29, 161, 242, 0.79); */
+}
+
+#c_gl .c_brand_logo i
+{
+    background-color: rgba(217, 48, 37, 0.79);
+}
+
+.cc_card .c_brand_logo i
+{
+    background-color: rgba(255, 255, 255, 0.79);
+}
+
+.c_share_count
+{
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin: 15px 0;
+    letter-spacing: 1px;
+}
+
+#c_o_fb .c_share_count
+{
+    color: #4267b2;
+}
+
+#c_o_tw .c_share_count
+{
+    color: #1da1f2;
+}
+
+#c_o_gl .c_share_count
+{
+    color: #d93025;
+}
+
+.c_share_link
+{
+    color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    max-width: 60px;
+    font-size: 14px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    padding: 6px;
+    background-color: rgba(255, 255, 255, 0.79);
+    border-radius: 3px;
+}
+
+#c_o_fb .c_share_link
+{
+    color: #4267b2;
+    border-bottom-color: #4267b2;
+}
+
+#c_o_tw .c_share_link
+{
+    color: #1da1f2;
+    border-bottom-color: #1da1f2;
+}
+
+#c_o_gl .c_share_link
+{
+    color: #d93025;
+    border-bottom-color: #d93025;
+}
+
+#ytd_link
+{
+    position: relative;
+    top: 50px;
+    display: block;
+    width: 166px;
+    clear: both;
+    color: #d93025;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    padding: 6px 14px 10px 14px;
+    margin: 0 auto;
+    margin-bottom:50px;
+    background-color: #f8f8f8;
+    border: 1px solid #d93025;
+    border-radius: 2px;
+}
+
+#ytd_link i
+{
+    display: inline-block;
+    width: 18px;
+    margin-right: 6px;
+    vertical-align: middle;
+}

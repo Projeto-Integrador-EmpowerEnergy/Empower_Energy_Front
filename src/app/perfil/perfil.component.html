@@ -45,12 +45,13 @@
               </div>
             </div>
 
+            <!-- Postagens do Usuário -->
             <h1>Teste</h1>
             <div class="container my-2">
               <div class="row d-flex justify-content-center mr-1">
                 <div
                   class="col-md-8 p-0"
-                  *ngFor="let item of listaPostagens | orderBy: key:reverse"
+                  *ngFor="let item of user.postagem | orderBy: key:reverse"
                 >
                   <div class="postagem-container rounded p-0">
                     <div
