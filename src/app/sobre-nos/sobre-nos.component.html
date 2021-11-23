@@ -5,16 +5,25 @@
     <div class="header__logo">
       <div>
         <img
-          style="margin-left: -26px"
+          style="width: 15vw; margin-top: -2px; margin-left: -103px"
           class="header__img"
-          src="https://image.ibb.co/kcVou6/path3000.png"
+          src="/assets/img/logobranco.svg"
         />
       </div>
-
-      <h1 style="margin-top: -65px" class="header__title">
-        EmpowerEnergy<!-- <span class="header__light">.io</span> -->
-      </h1>
     </div>
+    <button
+      type="button"
+      class="navbar-toggle collapsed"
+      data-toggle="collapse"
+      data-target="#navbar"
+      aria-expanded="false"
+      aria-controls="navbar"
+    >
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
 
     <div class="header__menu">
       <nav id="navbar" class="header__nav collapse">
@@ -23,17 +32,16 @@
             <a href="#" class="header__link">Home</a>
           </li>
           <li class="header__el">
-            <a href="#" class="header__link">Pricing</a>
-          </li>
-          <li class="header__el">
-            <a href="#" class="header__link">Blog</a>
-          </li>
-          <li class="header__el">
             <a routerLink="/sobre" class="header__link">Sobre nós</a>
           </li>
           <li class="header__el header__el--blue">
-            <a href="" routerLink="/entrar" class="btn btn--white btn-espaço">Login →</a>
-            <a href="" routerLink="/cadastrar" class="btn btn--white"
+            <a
+              href=""
+              routerLink="/entrar"
+              class="btn btn--white btn-espaço mr-2"
+              >Login →</a
+            >
+            <a href="" routerLink="/cadastrar" class="btn btn--white ml-2"
               >Cadastrar →</a
             >
           </li>
