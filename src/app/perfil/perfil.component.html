@@ -16,10 +16,9 @@
                   <img src="{{ foto }}" alt="..." class="img-thumbnail tm" />
                   <div class="container">
                     <h1>{{ user.nomeUsuario }} {{ user.sobrenomeUsuario }}</h1>
-                    <p>
-                      Desenvolvedora Full Stack Jr | Java Developer | Scrum |
-                      Spring Boot | MySQL | Python | HTML | CSS | JS
-                    </p>
+                    <h3>
+                      {{user.profissaoUsuario}}
+                    </h3>
                   </div>
 
                   <div class="container-fluid tm-2">
@@ -260,6 +259,21 @@
             required
           ></textarea>
           <div class="invalid-feedback"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="profissaoUsuario">Profissão</label>
+          <input
+            [(ngModel)]="user.profissaoUsuario"
+            class="form-control"
+            type="text"
+            name="profissaoUsuario"
+            id="profissaoUsuario"
+            placeholder="Ex: Desenvolvedor(a) Full Stack Jr | Java Developer | Scrum | Spring Boot | MySQL | Python | HTML | CSS | JS "
+          />
+          <div class="invalid-feedback">
+            A Profissão precisa ter no mínimo 5 letras.
+          </div>
         </div>
 
         <div class="form-group">

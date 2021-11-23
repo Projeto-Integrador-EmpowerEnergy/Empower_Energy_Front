@@ -49,6 +49,8 @@ export class InicioComponent implements OnInit {
 
   ngOnInit() {
 
+    console.log(this.user);
+
     window.scroll(0,0)
 
     if(environment.token == ''){
