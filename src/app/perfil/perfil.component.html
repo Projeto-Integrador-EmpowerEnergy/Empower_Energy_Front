@@ -11,14 +11,11 @@
                   src="assets\img\exemplo capa.jfif"
                   alt="Imagem de capa do card"
                 />
-                <div class="col-md-6" ><!-- *ngFor="let item of listaUsuarios" -->
-                  <img
-                    src="{{ foto }}"
-                    alt="..."
-                    class="img-thumbnail tm"
-                  />
+                <div class="col-md-6">
+                  <!-- *ngFor="let item of listaUsuarios" -->
+                  <img src="{{ foto }}" alt="..." class="img-thumbnail tm" />
                   <div class="container">
-                    <h1>{{ nome }} {{ sobrenome }}</h1>
+                    <h1>{{ user.nomeUsuario }} {{ user.sobrenomeUsuario }}</h1>
                     <p>
                       Desenvolvedora Full Stack Jr | Java Developer | Scrum |
                       Spring Boot | MySQL | Python | HTML | CSS | JS
@@ -44,6 +41,166 @@
                     >
                       Editar Perfil
                     </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h1>Teste</h1>
+            <div class="container my-2">
+              <div class="row d-flex justify-content-center mr-1">
+                <div
+                  class="col-md-8 p-0"
+                  *ngFor="let item of listaPostagens | orderBy: key:reverse"
+                >
+                  <div class="postagem-container rounded p-0">
+                    <div
+                      class="row d-flex justify-content-center pt-3 mb-3 mx-0"
+                    >
+                      <div class="col-md-1 mr-1">
+                        <img
+                          class="rounded-circle bg-info"
+                          height="45px"
+                          width="45px"
+                          src="{{ item.usuario.fotoUsuario }}"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="col-md-9">
+                        <div class="mr-2">
+                          <h6 class="text-muted">
+                            {{ item.usuario.nomeUsuario }}
+                            {{ item.usuario.sobrenomeUsuario }}
+                          </h6>
+                        </div>
+
+                        <div class="mr-3">
+                          <small class="text-muted"
+                            >Data:
+                            {{ item.dataPostagem | date: "dd/MM/yyyy" }} às
+                            {{ item.dataPostagem | date: "HH:mm" }}
+                          </small>
+                        </div>
+                      </div>
+
+                      <!-- Edição e deleção apenas se o usuário for dono da postagem -->
+                      <div class="col-md-1 pl-0">
+                        <a
+                          *ngIf="idUser === item.usuario.idUsuario"
+                          data-toggle="modal"
+                          data-target="#editarPostagem"
+                          href="#editarPostagem"
+                          ><i
+                            class="fa fa-pencil mr-1"
+                            aria-hidden="true"
+                            (click)="findByIdPostagem(item.idPostagem)"
+                          ></i
+                        ></a>
+
+                        <a
+                          *ngIf="idUser === item.usuario.idUsuario"
+                          class="cursor-pointer"
+                          ><i
+                            class="fa fa-trash ml-2"
+                            style="color: red; cursor: pointer"
+                            aria-hidden="true"
+                            (click)="deletarPostagem(item.idPostagem)"
+                          ></i
+                        ></a>
+                      </div>
+
+                      <div
+                        class="
+                          row
+                          d-flex
+                          justify-content-center
+                          w-100
+                          mt-3
+                          mx-0
+                        "
+                      >
+                        <div class="col-md-11">
+                          <div class="row d-flex align-items-center">
+                            <div class="col-md-10">
+                              <h5 class="text-align mb-0 align-items-center">
+                                {{ item.titulo }}
+                              </h5>
+                            </div>
+
+                            <div class="col-md-2 d-flex justify-content-end">
+                              <button
+                                *ngIf="item.tema.tema === 'Eólica'"
+                                type="button"
+                                class="btn btn-success"
+                                disabled
+                              >
+                                {{ item.tema.tema }}
+                              </button>
+
+                              <button
+                                *ngIf="item.tema.tema === 'Solar'"
+                                type="button"
+                                class="btn btn-warning"
+                                disabled
+                              >
+                                {{ item.tema.tema }}
+                              </button>
+
+                              <button
+                                *ngIf="item.tema.tema === 'Hídrica'"
+                                type="button"
+                                class="btn btn-primary"
+                                disabled
+                              >
+                                {{ item.tema.tema }}
+                              </button>
+
+                              <button
+                                *ngIf="item.tema.tema === 'Biomassa'"
+                                type="button"
+                                class="btn btn-outline-secondary"
+                                disabled
+                              >
+                                {{ item.tema.tema }}
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="
+                          row
+                          d-flex
+                          justify-content-center
+                          mt-2
+                          mx-0
+                          w-100
+                        "
+                      >
+                        <div class="col-md-11">
+                          <p class="mb-0 text-justify">{{ item.descricao }}</p>
+                        </div>
+
+                        <div
+                          class="row d-flex justify-content-start w-100 ml-5"
+                        >
+                          <p class="text-primary">{{ item.hashtag }}</p>
+                        </div>
+                      </div>
+
+                      <div class="row d-flex justify-content mt-1 mx-0 mb-4">
+                        <div class="col-md-12">
+                          <img
+                            src="{{ item.imagem }}"
+                            height="400px"
+                            width="580px"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -101,9 +258,7 @@
             placeholder="Digite seu sobrenome aqui"
             required
           ></textarea>
-          <div class="invalid-feedback">
-
-          </div>
+          <div class="invalid-feedback"></div>
         </div>
 
         <div class="form-group">
@@ -150,7 +305,8 @@
             name="senha"
             id="senha"
             rows="1"
-            placeholder="Digite sua nova senha aqui" (input)='confirmSenha($event)'
+            placeholder="Digite sua nova senha aqui"
+            (input)="confirmSenha($event)"
           />
         </div>
 
@@ -166,7 +322,6 @@
             placeholder="Confirme sua nova senha aqui"
           />
         </div>
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">
