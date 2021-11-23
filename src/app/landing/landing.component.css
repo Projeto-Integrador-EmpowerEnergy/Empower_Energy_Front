@@ -48,7 +48,7 @@ body {
 }
 
 .sect--violet {
-  background-color: #6f79ff;
+  background-color: #ffffff;
 }
 
 .sect--padding-bottom {
@@ -158,7 +158,7 @@ body {
 }
 
 .price-box--violet .price-box__dollar {
-  color: #6f79ff;
+  color: #57ae09;
 }
 
 .price-box--blue .price-box__dollar {
@@ -212,7 +212,7 @@ body {
 }
 
 .price-box--violet .price-box__list-el:before {
-  color: #6f79ff;
+  color: #57ae09;
 }
 
 .price-box--blue .price-box__list-el:before {
@@ -271,14 +271,14 @@ body {
 }
 
 .btn--violet {
-  background-color: #6f79ff;
+  background-color: #57ae09;
 }
 .btn--violet:hover {
   background-color: #878ef3;
 }
 
 .btn--blue {
-  background-color: #3a9fff;
+  background-color: #57ae09;
 }
 .btn--blue:hover {
   background-color: #63b2fc;
@@ -375,7 +375,7 @@ body {
   height: 12px;
   width: 12px;
   background-color: #fff;
-  border: 2px solid #8198ae;
+  border: 2px solid #57ae09;
   margin-right: 8px;
   border-radius: 50%;
 }
@@ -384,7 +384,7 @@ body {
   height: 12px;
   width: 12px;
   background-color: #fff;
-  border: 3px solid #6f79ff;
+  border: 3px solid #57ae09;
   margin-right: 10px;
   border-radius: 50%;
 }
@@ -1011,5 +1011,7 @@ body {
     margin-top: -1px;
     margin-left: -103px
     }
+
+    /* footer */
 
 }
