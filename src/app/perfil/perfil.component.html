@@ -1,19 +1,21 @@
-<div class="container mt-4 perfil pa">
-  <div class="mar">
-    <div class="col-md-10">
-      <div class="container ml-2">
+<div class="container perfil">
+  <div class="row d-flex ">
+    <div class="col-md-9 p-0 d-flex justify-content-center">
+      <div class="container p-0">
         <div class="card-img-bottom">
-          <div class="card-body">
+          <div class="card-body p-0">
             <div class="card-info">
-              <div class="row d-flex card-address container-fluid">
+              <div class="row d-flex card-address container-fluid  pr-0">
                 <img
-                  class="card-img-bottom"
+                  class="card-img-bottom rounded"
                   src="assets\img\exemplo capa.jfif"
                   alt="Imagem de capa do card"
                 />
-                <div class="col-md-9">
-                  <img src="{{ foto }}" alt="..." class="img-thumbnail tm" />
-                  <div class="container">
+
+                <div class="row d-flex justify-content-evenly">
+                  <div class="col-md-9 ml-3">
+                  <img src="{{ foto }}" alt="..." class="img-thumbnail tm1 ml-3" />
+                  <div class="container ml-2">
                     <h3>
                       <strong>
                         {{ user.nomeUsuario }} {{ user.sobrenomeUsuario }}
@@ -25,8 +27,8 @@
                   </div>
                 </div>
 
-                <div class="col-md-3">
-                  <div class="container-fluid tm-2">
+                <div class="col-md-2 mr-0">
+                  <div class="container-fluid tm-2 pr-0">
                     <a
                       class="
                         nav-link
@@ -46,6 +48,7 @@
                       Editar Perfil
                     </a>
                   </div>
+                </div>
                 </div>
 
               </div>
