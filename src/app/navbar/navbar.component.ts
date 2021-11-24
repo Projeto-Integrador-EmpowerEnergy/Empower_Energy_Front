@@ -54,14 +54,7 @@ export class NavbarComponent implements OnInit {
   findAllTemas(){
     this.temaService.getAllTema().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
-      /* console.log(resp) */
-    })
-  }
-
-  findByIdTema(id: number){
-    console.log(id)
-    this.temaService.getByIdTema(id).subscribe((resp: Tema) => {
-      this.tema = resp
+      console.log(resp)
     })
   }
 
@@ -99,11 +92,24 @@ export class NavbarComponent implements OnInit {
     })
   } */
 
-  apagarTema(id: number){
-    console.log(this.id)
-    alert('Tem certeza que você quer excluir esta postagem?')
-    this.temaService.deleteTema(id).subscribe(() => {
+  findByIdTema(idTema: number){
+    console.log(idTema)
+    /* alert('Deseja editar esse tema?') */
+    this.temaService.getByIdTema(idTema).subscribe((resp: Tema) => {
+      this.tema = resp
+
+      /* this.apagarTema(this.idTema) */
+    })
+  }
+
+  apagarTema(idTema: number){
+    /* this.tema.idTema = this.idTema */
+    /* this.findByIdTema(this.idTema) */
+    console.log(idTema)
+    alert('Tem certeza que você quer excluir este tema?')
+    this.temaService.deleteTema(idTema).subscribe(() => {
       alert('Tema apagado com sucesso!')
+      this.tema = new Tema()
       this.findAllTemas()
 
     })
