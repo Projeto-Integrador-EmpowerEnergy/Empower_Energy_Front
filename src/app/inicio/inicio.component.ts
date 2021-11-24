@@ -102,12 +102,24 @@ export class InicioComponent implements OnInit {
     this.tema.idTema = this.idTema
     this.postagem.tema = this.tema
 
+    if (this.postagem.imagem == null && this.postagem.tema.idTema == 2){
+      this.postagem.imagem = "/assets/img/Wind.png"
+    } else if (this.postagem.imagem == null && this.postagem.tema.idTema == 3){
+      this.postagem.imagem = "/assets/img/Sun.png"
+    } else if (this.postagem.imagem == null && this.postagem.tema.idTema == 5){
+      this.postagem.imagem = "/assets/img/Hazardous.png"
+    } else if (this.postagem.imagem == null && this.postagem.tema.idTema == 4){
+      this.postagem.imagem = "/assets/img/Biologist.png"
+    }
 
     /* if(this.postagem.titulo == '' || this.postagem.titulo == null) {
       alert('É necessário preencher Título, Texto e Tema!')
     } else { */
       this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
+
+      console.log(this.postagem)
+
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
@@ -121,6 +133,10 @@ export class InicioComponent implements OnInit {
 
     this.tema.idTema = this.idTema
     this.postagem.tema = this.tema
+
+    /* if(this.postagem.tema.tema == 'Eólica' && this.postagem.imagem == '' || this.postagem.imagem == null){
+      this.postagem.imagem = "/assets/img/Wind.png"
+    } */
 
     this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
@@ -139,6 +155,7 @@ export class InicioComponent implements OnInit {
   }
 
   deletarPostagem(id: number){
+    console.log(id)
     alert('Tem certeza que você quer excluir esta postagem?')
     this.postagemService.deletePostagem(id).subscribe(() => {
       alert('Postagem excluída com sucesso!')
