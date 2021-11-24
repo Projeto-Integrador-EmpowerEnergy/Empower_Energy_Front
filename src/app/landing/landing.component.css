@@ -583,23 +583,23 @@ body {
   -moz-transition: all 0.4s;
   -ms-transition: all 0.4s;
   -o-transition: all 0.4s;
-  background-image: url(/src/assets/img/angularjs.png);
+  background-image: url(/src/assets/img/angular.png);
 }
 
-/* .article-pre__img--first{
-   background-image: url(/src/assets/img/angularjs.png);
-} */
+.article-pre__img--first{
+   background-image: url(/assets/img/springboot.jfif);
+}
 
 .article-pre__img--second {
-  background-image: url(https://image.ibb.co/cYsvbw/dribbble.jpg);
+  background-image: url(/assets/img/mySQL.jpg);
 }
 
 .article-pre__img--third {
-  background-image: url(https://cdn.dribbble.com/users/103909/screenshots/3671664/sensors-01.jpg);
+  background-image: url(/assets/img/bootstrap.png);
 }
 
 .article-pre__img--fourth {
-  background-image: url(https://cdn.dribbble.com/users/997070/screenshots/4120967/attachments/943230/01-1._Cover_Copy_2x.png);
+  background-image: url(/assets/img/angular.png);
 }
 
 .article-pre:hover .article-pre__img {
