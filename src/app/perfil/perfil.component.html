@@ -1,5 +1,5 @@
-<div class="container perfil">
-  <div class="row d-flex">
+<div class="container perfil ">
+  <div class="row d-flex ">
     <div class="col-md-9 p-0 d-flex justify-content-center">
       <div class="container p-0">
         <div class="card-img-bottom">
@@ -31,51 +31,48 @@
                         </p>
                       </div>
                     </div>
-
-
-
                   </div>
 
-                      <div class="col-md-2 mr-0 w-100" style="margin-right: 0px">
-                        <div class="container tm-2 pr-0">
-                          <a
-                            class="
-                              nav-link
-                              dropdown-toggle
-                              text-white
-                              btn btn-outline-success
-                            "
-                            href="#"
-                            id="navbarDropdown"
-                            role="button"
-                            data-toggle="modal"
-                            data-target="#editarUsuario"
-                            aria-expanded="false"
-                            type="button"
-                            style="background-color: #57ae09"
-                          >
-                            Editar Perfil
-                          </a>
-                        </div>
-                      </div>
-
-
+                  <div class="col-md-2 mr-0 w-100" style="margin-right: 0px">
+                    <div class="container tm-2 pr-0">
+                      <a
+                        class="
+                          nav-link
+                          dropdown-toggle
+                          text-white
+                          btn btn-outline-success
+                        "
+                        href="#"
+                        id="navbarDropdown"
+                        role="button"
+                        data-toggle="modal"
+                        data-target="#editarUsuario"
+                        aria-expanded="false"
+                        type="button"
+                        style="background-color: #57ae09"
+                      >
+                        Editar Perfil
+                      </a>
                     </div>
-
-
-
-
+                  </div>
+                </div>
               </div>
             </div>
 
+            <hr class="mr-3">
+
             <!-- Postagens do Usuário -->
-            <h1>Teste</h1>
-            <div
-              class="container my-2"
-              *ngFor="let item of user.minhasPostagens | orderBy: key:reverse"
-            >
-              <div class="row d-flex justify-content-center mr-1">
-                <div class="col-md-8 p-0">
+            <div class="row d-flex justify-content-center">
+              <h2>Minhas Postagens</h2>
+            </div>
+            <div class="container my-2" >
+              <div class="row d-flex justify-content-center mr-1 rounded" style="background-color: #eaebed;">
+                <div
+                  class="col-md-12 p-0"
+                  *ngFor="
+                    let item of user.minhasPostagens | orderBy: key:reverse
+                  "
+                >
                   <div class="postagem-container rounded p-0">
                     <div
                       class="row d-flex justify-content-center pt-3 mb-3 mx-0"
@@ -85,7 +82,7 @@
                           class="rounded-circle bg-info"
                           height="45px"
                           width="45px"
-                          src="{{ item.usuario.fotoUsuario }}"
+                          src="{{ foto }}"
                           alt=""
                         />
                       </div>
@@ -93,8 +90,8 @@
                       <div class="col-md-9">
                         <div class="mr-2">
                           <h6 class="text-muted">
-                            {{ item.usuario.nomeUsuario }}
-                            {{ item.usuario.sobrenomeUsuario }}
+                            {{ nome }}
+                            {{ sobrenome }}
                           </h6>
                         </div>
 
@@ -110,7 +107,6 @@
                       <!-- Edição e deleção apenas se o usuário for dono da postagem -->
                       <div class="col-md-1 pl-0">
                         <a
-                          *ngIf="idUser === item.usuario.idUsuario"
                           data-toggle="modal"
                           data-target="#editarPostagem"
                           href="#editarPostagem"
@@ -121,9 +117,7 @@
                           ></i
                         ></a>
 
-                        <a
-                          *ngIf="idUser === item.usuario.idUsuario"
-                          class="cursor-pointer"
+                        <a class="cursor-pointer"
                           ><i
                             class="fa fa-trash ml-2"
                             style="color: red; cursor: pointer"
