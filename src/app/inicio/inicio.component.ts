@@ -44,12 +44,12 @@ export class InicioComponent implements OnInit {
     private route: ActivatedRoute,
     private postagemService: PostagemService,
     private temaService: TemaService,
-    private authService: AuthService
+    public authService: AuthService
   ) { }
 
   ngOnInit() {
 
-    console.log(this.user);
+    console.log(this.user.tipoUsuario);
 
     window.scroll(0,0)
 
@@ -65,7 +65,8 @@ export class InicioComponent implements OnInit {
     this.getAllPostagens()
     this.getAllTemas()
 
-    console.log(this.user)
+    this.findByIdUser(this.idUser)
+    console.log(this.tipoUser)
 
 }
 
@@ -87,8 +88,9 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  findByIdUser(){
-    this.authService.getByIdUser(this.idUser).subscribe((resp: User) => {
+  findByIdUser(id: number){
+    console.log(id)
+    this.authService.getByIdUser(id).subscribe((resp: User) => {
       this.user = resp
     })
   }

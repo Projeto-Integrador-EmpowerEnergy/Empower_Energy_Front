@@ -31,40 +31,31 @@
                         </p>
                       </div>
                     </div>
-
-
-
                   </div>
 
-                      <div class="col-md-2 mr-0 w-100" style="margin-right: 0px">
-                        <div class="container tm-2 pr-0">
-                          <a
-                            class="
-                              nav-link
-                              dropdown-toggle
-                              text-white
-                              btn btn-outline-success
-                            "
-                            href="#"
-                            id="navbarDropdown"
-                            role="button"
-                            data-toggle="modal"
-                            data-target="#editarUsuario"
-                            aria-expanded="false"
-                            type="button"
-                            style="background-color: #57ae09"
-                          >
-                            Editar Perfil
-                          </a>
-                        </div>
-                      </div>
-
-
+                  <div class="col-md-2 mr-0 w-100" style="margin-right: 0px">
+                    <div class="container tm-2 pr-0">
+                      <a
+                        class="
+                          nav-link
+                          dropdown-toggle
+                          text-white
+                          btn btn-outline-success
+                        "
+                        href="#"
+                        id="navbarDropdown"
+                        role="button"
+                        data-toggle="modal"
+                        data-target="#editarUsuario"
+                        aria-expanded="false"
+                        type="button"
+                        style="background-color: #57ae09"
+                      >
+                        Editar Perfil
+                      </a>
                     </div>
-
-
-
-
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -85,7 +76,7 @@
                           class="rounded-circle bg-info"
                           height="45px"
                           width="45px"
-                          src="{{ item.usuario.fotoUsuario }}"
+                          src="{{ foto }}"
                           alt=""
                         />
                       </div>
@@ -93,8 +84,8 @@
                       <div class="col-md-9">
                         <div class="mr-2">
                           <h6 class="text-muted">
-                            {{ item.usuario.nomeUsuario }}
-                            {{ item.usuario.sobrenomeUsuario }}
+                            {{ nome }}
+                            {{ sobrenome }}
                           </h6>
                         </div>
 

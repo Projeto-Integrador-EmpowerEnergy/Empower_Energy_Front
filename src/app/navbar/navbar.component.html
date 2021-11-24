@@ -3,16 +3,12 @@
   style="background-color: #eaebed"
 >
   <!-- criação da navBar -->
-  <nav
-    class="navbar navbar-expand d-flex justify-content-between w-100"
-
-  >
+  <nav class="navbar navbar-expand d-flex justify-content-between w-100">
     <form style="width: 400px" class="my-1 my-lg-0">
       <div class="input-group col-md-8">
         <input
           class="form-control py-2"
           type="search"
-
           id="example-search-input"
           placeholder="Pesquisar"
         />
@@ -53,10 +49,14 @@
     </button>
 
     <!-- botões da navbar -->
-    <div class="d-flex justify-content-end align-items-center" style="margin-right: 200px;">
+    <div
+      class="d-flex justify-content-end align-items-center"
+      style="margin-right: 200px"
+    >
       <div class="dropdown mr-4">
-        <!-- *ngIf='authService.admin()' -->
+        <!-- *ngIf="authService.admin()" -->
         <button
+
           class="btn btn-success"
           type="button"
           id="dropdownMenuButton"
