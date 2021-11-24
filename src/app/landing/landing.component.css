@@ -226,7 +226,6 @@ body {
 }
 
 .btn {
-  background-color: #57ae09;
   border-radius: 20px;
   padding: 10px 25px;
   color: #fff;
@@ -975,10 +974,10 @@ body {
   .row--margin {
     margin-top: 30px;
   }
-  .btn {
+/*   .btn {
     font-size: 12px;
     padding: 8px 8px;
-  }
+  } */
   .btn--width {
     width: 100px;
   }
@@ -1011,5 +1010,7 @@ body {
     margin-top: -1px;
     margin-left: -103px
     }
+
+
 
 }
