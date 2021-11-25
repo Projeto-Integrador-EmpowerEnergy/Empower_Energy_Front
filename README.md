@@ -61,7 +61,7 @@ A inspiração foi o Objetivo de Desenvolvimento Sustentável(ODS) 7, que visa a
 
 🔗 Links
 
-<a src="https://linktr.ee/empowerenergy" <img src="https://p.kindpng.com/picc/s/551-5516316_linktree-logo-png-transparent-png.png"></a>
+<a href="https://linktr.ee/empowerenergy" <img src="https://p.kindpng.com/picc/s/551-5516316_linktree-logo-png-transparent-png.png"></a>
 
 🚀 Implementações Futuras
 
