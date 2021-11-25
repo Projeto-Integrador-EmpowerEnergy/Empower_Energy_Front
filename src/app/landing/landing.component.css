@@ -22,9 +22,6 @@ body {
   background-position: center;
 }
 
-.tm {
-}
-
 .site__title {
   color: #eaebed;
 }
@@ -41,10 +38,6 @@ body {
 
 .collapse {
   display: block;
-}
-
-.sect--grey {
-  /*background-color: #ebeff9;*/
 }
 
 .sect--violet {
