@@ -54,7 +54,7 @@ export class NavbarComponent implements OnInit {
   findAllTemas(){
     this.temaService.getAllTema().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
-      console.log(resp)
+      /* console.log(resp) */
     })
   }
 
