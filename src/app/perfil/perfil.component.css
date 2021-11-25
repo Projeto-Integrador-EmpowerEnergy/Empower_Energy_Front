@@ -1,21 +1,26 @@
 .tm{
-    width: 200px;
-    height: 200px;
-    margin-top: -180px;
+    /* width: 200px;
+    height: 200px; */
+    margin-top: -130px;
+}
+
+.tm1{
+  width: 200px;
+  height: 200px;
+  margin-top: -130px;
 }
 
 .tm-2{
-    width: 190px;
+    width: 150px;
     height: 200px;
-    margin-right: -431px;
-    margin-top: -150px;
+    margin-right: -80px;
+    margin-top: 82px;
 }
 
 .perfil{
-    margin-left: 165px;
-    padding: 12px;
-}
+    margin-left: 235px;
+    margin-top: 75px;
 
-.pa{
-margin-right: -220px;
-}
+  }
+
+
