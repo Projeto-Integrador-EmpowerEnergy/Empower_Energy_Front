@@ -5,26 +5,6 @@ A EmpowerEnergy tem o intuito de conectar interessados e curiosos no tema de ene
 
  📌 Índice
  
- <div id="readme" class="Box md js-code-block-container js-code-nav-container js-tagsearch-file Box--responsive"
-        data-tagsearch-path="README.md"
-        data-tagsearch-lang="Markdown">
-
-      <div class="d-flex  js-sticky js-position-sticky top-0 border-top-0 border-bottom p-2 flex-items-center flex-justify-between color-bg-default rounded-top-2"  style="position: sticky; z-index: 30;" >
-        <div class="d-flex flex-items-center">
-            <details
-  data-target="readme-toc.trigger"
-  data-menu-hydro-click="{&quot;event_type&quot;:&quot;repository_toc_menu.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;trigger&quot;,&quot;repository_id&quot;:411400428,&quot;originating_url&quot;:&quot;https://github.com/FelipeJuanFernandes/blue-generation&quot;,&quot;user_id&quot;:89674125}}"
-  data-menu-hydro-click-hmac="e878de037c80229a5a01d75cc9475fc8deef603c5c4410c9f457243319c9f795"
-  class="dropdown details-reset details-overlay"
->
-  <summary
-    class="btn btn-octicon m-0 mr-2 p-2"
-    aria-haspopup="true"
-    aria-label="Table of Contents">
-    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-list-unordered">
-    <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
-</svg>
-  </summary>
 
  ℹ Sobre o Projeto
 
