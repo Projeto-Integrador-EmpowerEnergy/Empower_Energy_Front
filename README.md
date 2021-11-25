@@ -13,6 +13,7 @@ A inspiração foi o Objetivo de Desenvolvimento Sustentável(ODS) 7, que visa a
 
 
 💻 Tecnologias
+
 IDE's: Visual Studio Code e Eclipse
 
 Linguagens de programação:
