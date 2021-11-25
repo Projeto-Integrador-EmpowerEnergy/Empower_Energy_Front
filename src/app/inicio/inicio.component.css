@@ -1,27 +1,26 @@
-.margint-10{
-  margin-top: 9vh;
+.margint-10 {
+  margin-top: 75px;
 }
 
-.postagem-container{
-  background-color: #EAEBED;
+.postagem-container {
+  background-color: #eaebed;
   height: auto;
   /* width: 100vw; */
- margin-left: -45px;
+  margin-left: -25px;
 }
 
-.tam{
+.tam {
   margin-left: -15px;
   height: auto;
   /* margin-right: -1100px; */
 }
 
-.size-img{
+.size-img {
   width: 25px;
   height: 25px;
 }
 
-#img-rouded{
+#img-rouded {
   border: 2px solid black;
   border-radius: 50%;
 }
-

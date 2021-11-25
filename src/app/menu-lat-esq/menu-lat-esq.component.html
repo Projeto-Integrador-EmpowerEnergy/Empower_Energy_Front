@@ -8,8 +8,47 @@
     />
   </div>
 
-  <ul class="sidebar-navigation">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-9 br">
+      <div class="d-flex justify-content-center">
+        <img src="{{ foto }}" alt="..." class="img-thumbnail tm rounded-circle mb-2"
+        style="height: 135px; width: 135px;" />
+      </div>
 
+      <div class="d-flex justify-content-center container" style="color: black">
+        <h4>
+           {{ nome }} {{ user.sobrenomeUsuario }} 
+        </h4>
+        <p class="text-justify">
+          {{ user.profissaoUsuario }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="row d-flex justify-content-center py-3 mb-3 mx-0">
+    <div class="col-md-1 mr-1">
+      <img
+        class="rounded-circle"
+        height="45px"
+        width="45px"
+        src="{{ item.usuario.fotoUsuario }}"
+        alt=""
+      />
+    </div>
+
+    <div class="col-md-1">
+      <div class="container mr-2">
+        <h3 class="text-muted">
+          {{ item.usuario.nomeUsuario }}
+          {{ item.usuario.sobrenomeUsuario }}
+        </h3>
+      </div>
+    </div>
+  </div>
+   -->
+
+  <ul class="sidebar-navigation">
     <p>
       <li>
         <a href="#">
@@ -41,34 +80,46 @@
         </a>
       </li>
     </p>
-
-    <p>
-      <li>
-        <a href="#">
-          <i class="fa fa-info-circle mr-4" aria-hidden="true"></i> Informações
-        </a>
-      </li>
-    </p>
   </ul>
 
-  <div class="row d-flex justify-content-center mb-3">
+  <!-- <div class="row d-flex justify-content-center mb-3">
     <img
       src="/assets/img/menu esquerdo.png"
       alt="desenho menu esquerdo"
       width="180px"
       height="160px"
     />
+  </div> -->
+
+  <div class="row d-flex justify-content-center">
+    <div id="app_cover row d-flex justify-content-center">
+      <div class="d-flex justify-content-center mb-2" style="color: black">
+        <small>Siga-nos nas redes sociais</small>
+      </div>
+
+      <a href="https://linktr.ee/empowerenergy" target="_blank" class="block">
+        <div class="card d-flex justify-content-center" id="c_fb">
+          <div class="c_brand_logo">
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          </div>
+        </div>
+      </a>
+
+      <a
+        href="https://github.com/Projeto-Integrador-EmpowerEnergy"
+        target="_blank"
+        class="block"
+      >
+        <div class="card" id="c_tw">
+          <div class="c_brand_logo">
+            <i class="fa fa-github-square" aria-hidden="true"></i>
+          </div>
+        </div>
+      </a>
+    </div>
   </div>
 
-
-    <button type="submit" class="btn btn-success rounded-pill mx-4">
+  <!-- <button type="submit" class="btn btn-success rounded-pill mx-4">
       Teste a nossa versão Premium.
-    </button>
-
-</div>
-
-<div class="content-container">
-  <div class="container-fluid"></div>
-
-  <div class="col-md-6 d-flex justify-content-center"></div>
+    </button> -->
 </div>

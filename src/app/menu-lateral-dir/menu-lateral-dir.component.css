@@ -10,7 +10,7 @@
   position: absolute;
   top: 75px;
   height: 80vh;
-  width: 21%;
+  width: 287px;
   right: 0px;
 }
 
@@ -118,7 +118,7 @@ input {
 section {
   border-radius: 10px;
   width: 280px;
-  margin: 10px auto;
+  margin-top: 10px;
   padding: 0px 5px 5px 10px;
   border: 2px solid var(--mainColor);
   background-color: #eaebed;
