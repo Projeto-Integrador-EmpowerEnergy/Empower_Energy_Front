@@ -49,7 +49,7 @@ export class InicioComponent implements OnInit {
 
   ngOnInit() {
 
-    console.log(this.user.tipoUsuario);
+    /* console.log(this.user.tipoUsuario); */
 
     window.scroll(0,0)
 
@@ -66,7 +66,7 @@ export class InicioComponent implements OnInit {
     this.getAllTemas()
 
     this.findByIdUser(this.idUser)
-    console.log(this.tipoUser)
+    /* console.log(this.tipoUser) */
 
 }
 
@@ -89,7 +89,7 @@ export class InicioComponent implements OnInit {
   }
 
   findByIdUser(id: number){
-    console.log(id)
+    /* console.log(id) */
     this.authService.getByIdUser(id).subscribe((resp: User) => {
       this.user = resp
     })
