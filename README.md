@@ -54,7 +54,7 @@ A inspiração foi o Objetivo de Desenvolvimento Sustentável(ODS) 7, que visa a
   <a target="_blank" rel="noopener noreferrer" href="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"><img align="center" alt="MySQL" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" style="max-width: 100%;"></a>
 </div><br>
 <ul dir="auto">
-<li>Deploy: Heroku <a href="https://bluegeneration.netlify.app/inicio" rel="nofollow">Link do site final</a></li>
+<li>Deploy: Heroku <a href="https://empowerenergy.netlify.app" rel="nofollow">Link do site final</a></li>
 </ul>
 <p dir="auto">-- BSM's: Trabalho em equipe, atenção ao detalhe, orientação ao futuro, responsabilidade pessoal, proatividade, comunicação, mentalidade de crescimento, e persistência.</p>
 <hr>
@@ -81,6 +81,66 @@ A inspiração foi o Objetivo de Desenvolvimento Sustentável(ODS) 7, que visa a
 - [@Kauana Andrade Lima](https://github.com/kauanaandrade)
 - [@Ronan Bedia Ferreira](https://github.com/ronanbedia)
 
+<h1 dir="auto"><a id="user-content--autores" class="anchor" aria-hidden="true" href="#-autores"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path></svg></a><g-emoji class="g-emoji" alias="bust_in_silhouette" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f464.png">👤</g-emoji> Autores</h1>
+<table>
+	<tbody><tr>
+		<td align="center">
+			<a href="(https://github.com/caiqueb05">
+				<img width="100px" height="auto" src="https://avatars.githubusercontent.com/u/81648936?v=4" alt="" style="max-width: 100%;">
+				<br>
+				<sub>
+					<b>Caique<br>Bezerra</b>
+				</sub>
+			</a>
+		</td>
+		<td align="center">
+			<a href="https://github.com/evelynarruda">
+				<img width="100px" height="auto" src="https://avatars.githubusercontent.com/u/89674125?v=4" alt="" style="max-width: 100%;">
+				<br>
+				<sub>
+					<b>Evelyn<br>Arruda Silva</b>
+				</sub>
+			</a>
+		</td>
+		<td align="center">
+			<a href="https://github.com/lleonardoazevedo">
+				<img width="100px" height="auto" src="https://avatars.githubusercontent.com/u/86493240?v=4" alt="" style="max-width: 100%;">
+				<br>
+				<sub>
+					<b>Leonardo Angelo<br>Souza Azevedo</b>
+				</sub>
+			</a>
+		</td>
+		<td align="center">
+			<a href="https://github.com/therealkaslow">
+				<img width="100px" height="auto" src="https://avatars.githubusercontent.com/u/88865748?v=4" alt="" style="max-width: 100%;">
+				<br>
+				<sub>
+					<b>Lucas<br>dos Reis Nascimento</b>
+				</sub>
+			</a>
+		</td>
+		<td align="center">
+			<a href="https://github.com/kauanaandrade">
+				<img width="100px" height="auto" src="https://avatars.githubusercontent.com/u/88996534?v=4" alt="" style="max-width: 100%;">
+				<br>
+				<sub>
+					<b>Kauana<br>Andrade Lima</b>
+				</sub>
+			</a>
+<td align="center">
+			<a href=" https://github.com/ronanbedia">
+				<img width="100px" height="auto" src="https://avatars.githubusercontent.com/u/89662092?v=4" alt="" style="max-width: 100%;">
+				<br>
+				<sub>
+					<b>Ronan<br>Bédia Ferreira</b>
+				</sub>
+			</a>
+		</td>
+	</tr>
+</tbody></table>
+<hr>
+
 🤝 Orientadores
 
 - [@Jeff](https://github.com/Jefferson-Itajahy)
@@ -91,4 +151,5 @@ A inspiração foi o Objetivo de Desenvolvimento Sustentável(ODS) 7, que visa a
 📜 Licença
 Copyright ©️ 2021 Empowerenergy
 [MIT](https://choosealicense.com/licenses/mit/)
+
 
