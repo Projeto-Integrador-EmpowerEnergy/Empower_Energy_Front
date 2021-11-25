@@ -1,6 +1,17 @@
 <div class="container-fluid" style="background-color: #eaebed; height: 100vh">
   <div class="row h-100">
-    <div class="tm container col-md-6 d-flex flex-column justify-content-center h-100 mb-0">
+    <div
+      class="
+        tm
+        container
+        col-md-6
+        d-flex
+        flex-column
+        justify-content-center
+        h-100
+        mb-0
+      "
+    >
       <img
         class="imagemLogo"
         src="/assets/img/logo2.png"
@@ -20,35 +31,56 @@
           <h3 class="text-center mb-0 mt-3" id="cad">Cadastre-se</h3>
 
           <form action="" class="needs-validation" novalidate>
-            <div class="form-group">
-              <label for="nome">Nome</label>
-              <input
-                [(ngModel)]="user.nomeUsuario"
-                class="form-control"
-                type="text"
-                name="nome"
-                id="nome"
-                placeholder="Como gostaria de ser chamade?"
-                required
-              />
-              <div class="invalid-feedback">
-                O nome precisa ter no mínimo 5 letras.
+            <div class="d-flex justify-content-between w-100">
+              <div class="form-group pr-1 w-50">
+                <label for="nome">Nome</label>
+                <input
+                  [(ngModel)]="user.nomeUsuario"
+                  class="form-control"
+                  type="text"
+                  name="nome"
+                  id="nome"
+                  placeholder="Como gostaria de ser chamade?"
+                  required
+                />
+                <div class="invalid-feedback">
+                  O nome precisa ter no mínimo 5 letras.
+                </div>
+              </div>
+
+
+
+              <div class="form-group pr-1 w-50">
+                <label for="sobreNome">Sobrenome</label>
+                <input
+                  [(ngModel)]="user.sobrenomeUsuario"
+                  class="form-control"
+                  type="text"
+                  name="sobreNome"
+                  id="sobreNome"
+                  placeholder="Insira seu Sobrenome"
+                  required
+                />
+                <div class="invalid-feedback">
+                  O sobrenome precisa ter no mínimo 5 letras.
+                </div>
               </div>
             </div>
 
+            <!-- profisson -->
+
             <div class="form-group">
-              <label for="sobreNome">Sobrenome</label>
+              <label for="profissaoUUsuario">Profissão</label>
               <input
-                [(ngModel)]="user.sobrenomeUsuario"
+                [(ngModel)]="user.profissaoUsuario"
                 class="form-control"
                 type="text"
-                name="sobreNome"
-                id="sobreNome"
-                placeholder="Insira seu Sobrenome"
-                required
+                name="profissaoUsuario"
+                id="profissaoUsuario"
+                placeholder="Ex: Desenvolvedor(a) Full Stack Jr | Java Developer | Scrum | Spring Boot | MySQL | Python | HTML | CSS | JS "
               />
               <div class="invalid-feedback">
-                O sobrenome precisa ter no mínimo 5 letras.
+                A Profissão precisa ter no mínimo 5 letras.
               </div>
             </div>
 
@@ -89,7 +121,7 @@
                   <option selected disabled value="">
                     Selecione um tipo de usuario:
                   </option>
-                  <option value="normal">Normal</option>
+                  <option value="padrao">Padrão</option>
                   <option value="adm">Administrador</option>
                 </select>
               </div>
