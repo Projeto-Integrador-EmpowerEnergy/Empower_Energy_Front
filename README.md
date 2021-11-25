@@ -5,24 +5,7 @@
 
 A EmpowerEnergy tem o intuito de conectar interessados e curiosos no tema de energias renováveis, seja para discutir sobre o assunto, ver opiniões de outras pessoas, apoiar projetos relacionados ao tema, fazer networking e futuramente, adquirir potenciais produtos que foram viabilizados através da nossa plataforma de financiamento coletivo.
 
-    <div id="readme" class="Box md js-code-block-container js-code-nav-container js-tagsearch-file Box--responsive"
-        data-tagsearch-path="README.md"
-        data-tagsearch-lang="Markdown">
-
-      <div class="d-flex  js-sticky js-position-sticky top-0 border-top-0 border-bottom p-2 flex-items-center flex-justify-between color-bg-default rounded-top-2"  style="position: sticky; z-index: 30;" >
-        <div class="d-flex flex-items-center">
-
-  <summary
-    class="btn btn-octicon m-0 mr-2 p-2"
-    aria-haspopup="true"
-    aria-label="Table of Contents">
-    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-list-unordered">
-    <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
-</svg>
-  </summary>
-
-
-  <details-menu class="SelectMenu" role="menu">
+    <details-menu class="SelectMenu" role="menu">
     <div class="SelectMenu-modal rounded-3 mt-1" style="max-height:340px;">
 
         <div class="SelectMenu-filter">
