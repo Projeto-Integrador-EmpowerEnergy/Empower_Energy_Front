@@ -5,6 +5,34 @@ A EmpowerEnergy tem o intuito de conectar interessados e curiosos no tema de ene
 
  📌 Índice
  
+ <details-menu class="SelectMenu" role="menu">
+    <div class="SelectMenu-modal rounded-3 mt-1" style="max-height:340px;">
+
+        <div class="SelectMenu-filter">
+          <input
+            class="SelectMenu-input form-control js-filterable-field"
+            id="toc-filter-field"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            autofocus
+            placeholder="Filter headings"
+            aria-label="Filter headings">
+        </div>
+
+      <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" data-filterable-for="toc-filter-field" data-filterable-type="substring">
+          <a role="menuitem" class="filter-item SelectMenu-item py-1 text-emphasized" style="padding-left: 12px;" data-action="click:readme-toc#blur" data-targets="readme-toc.entries" data-hydro-click="{&quot;event_type&quot;:&quot;repository_toc_menu.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;entry&quot;,&quot;repository_id&quot;:411400428,&quot;originating_url&quot;:&quot;https://github.com/FelipeJuanFernandes/blue-generation&quot;,&quot;user_id&quot;:89674125}}" data-hydro-click-hmac="9871cd9e37650c881769c30d0fda254da98a9b192cea08fcd0708041b7d1bb8e" href="#pushpin-índice"><g-emoji class="g-emoji" alias="pushpin" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4cc.png">📌</g-emoji> Índice</a>
+          <a role="menuitem" class="filter-item SelectMenu-item py-1 text-emphasized" style="padding-left: 12px;" data-action="click:readme-toc#blur" data-targets="readme-toc.entries" data-hydro-click="{&quot;event_type&quot;:&quot;repository_toc_menu.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;entry&quot;,&quot;repository_id&quot;:411400428,&quot;originating_url&quot;:&quot;https://github.com/FelipeJuanFernandes/blue-generation&quot;,&quot;user_id&quot;:89674125}}" data-hydro-click-hmac="9871cd9e37650c881769c30d0fda254da98a9b192cea08fcd0708041b7d1bb8e" href="#ℹ--sobre-o-projeto"><g-emoji class="g-emoji" alias="information_source" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2139.png">ℹ</g-emoji>  Sobre o Projeto</a>
+          <a role="menuitem" class="filter-item SelectMenu-item py-1 text-emphasized" style="padding-left: 12px;" data-action="click:readme-toc#blur" data-targets="readme-toc.entries" data-hydro-click="{&quot;event_type&quot;:&quot;repository_toc_menu.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;entry&quot;,&quot;repository_id&quot;:411400428,&quot;originating_url&quot;:&quot;https://github.com/FelipeJuanFernandes/blue-generation&quot;,&quot;user_id&quot;:89674125}}" data-hydro-click-hmac="9871cd9e37650c881769c30d0fda254da98a9b192cea08fcd0708041b7d1bb8e" href="#-implementações-futuras"><g-emoji class="g-emoji" alias="rocket" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f680.png">🚀</g-emoji> Implementações Futuras</a>
+          <a role="menuitem" class="filter-item SelectMenu-item py-1 text-emphasized" style="padding-left: 12px;" data-action="click:readme-toc#blur" data-targets="readme-toc.entries" data-hydro-click="{&quot;event_type&quot;:&quot;repository_toc_menu.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;entry&quot;,&quot;repository_id&quot;:411400428,&quot;originating_url&quot;:&quot;https://github.com/FelipeJuanFernandes/blue-generation&quot;,&quot;user_id&quot;:89674125}}" data-hydro-click-hmac="9871cd9e37650c881769c30d0fda254da98a9b192cea08fcd0708041b7d1bb8e" href="#-tecnologias"><g-emoji class="g-emoji" alias="computer" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4bb.png">💻</g-emoji> Tecnologias</a>
+          <a role="menuitem" class="filter-item SelectMenu-item py-1 text-emphasized" style="padding-left: 12px;" data-action="click:readme-toc#blur" data-targets="readme-toc.entries" data-hydro-click="{&quot;event_type&quot;:&quot;repository_toc_menu.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;entry&quot;,&quot;repository_id&quot;:411400428,&quot;originating_url&quot;:&quot;https://github.com/FelipeJuanFernandes/blue-generation&quot;,&quot;user_id&quot;:89674125}}" data-hydro-click-hmac="9871cd9e37650c881769c30d0fda254da98a9b192cea08fcd0708041b7d1bb8e" href="#-autores"><g-emoji class="g-emoji" alias="bust_in_silhouette" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f464.png">👤</g-emoji> Autores</a>
+          <a role="menuitem" class="filter-item SelectMenu-item py-1 text-emphasized" style="padding-left: 12px;" data-action="click:readme-toc#blur" data-targets="readme-toc.entries" data-hydro-click="{&quot;event_type&quot;:&quot;repository_toc_menu.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;entry&quot;,&quot;repository_id&quot;:411400428,&quot;originating_url&quot;:&quot;https://github.com/FelipeJuanFernandes/blue-generation&quot;,&quot;user_id&quot;:89674125}}" data-hydro-click-hmac="9871cd9e37650c881769c30d0fda254da98a9b192cea08fcd0708041b7d1bb8e" href="#-orientadores"><g-emoji class="g-emoji" alias="handshake" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f91d.png">🤝</g-emoji> Orientadores</a>
+          <a role="menuitem" class="filter-item SelectMenu-item py-1 text-emphasized" style="padding-left: 12px;" data-action="click:readme-toc#blur" data-targets="readme-toc.entries" data-hydro-click="{&quot;event_type&quot;:&quot;repository_toc_menu.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;entry&quot;,&quot;repository_id&quot;:411400428,&quot;originating_url&quot;:&quot;https://github.com/FelipeJuanFernandes/blue-generation&quot;,&quot;user_id&quot;:89674125}}" data-hydro-click-hmac="9871cd9e37650c881769c30d0fda254da98a9b192cea08fcd0708041b7d1bb8e" href="#-licença"><g-emoji class="g-emoji" alias="scroll" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4dc.png">📜</g-emoji> Licença</a>
+      </div>
+    </div>
+  </details-menu>
+</details>
+ 
 
  ℹ Sobre o Projeto
 
